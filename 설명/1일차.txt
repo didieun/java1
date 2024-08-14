@@ -1,0 +1,19 @@
+JDK설치
+
+1. https://www.oracle.com/
+
+Next > Next(설치 경로 확인) > Close
+C:\Program Files\Java\jdk-11.0.23\
+
+C:\Users\KGITBANK.DESKTOP-9ITP31A>javac
+'javac'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+
+
+
+- 1일차 결석하신분은 블로그 글 참조하여 1-2번 단계 진행(쉬는 시간 까지 완료)
+jdk11 설치  
+https://blog.naver.com/zooop7281/222847295524
+
+27분

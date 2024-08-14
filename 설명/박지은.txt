@@ -1,0 +1,4872 @@
+이름: 김혜린
+이메일: apeach_9@naver.com
+제목: java1 / 6월 / 평일 / 3:30 / 박지은
+
+--------------------------------------------------------------------------------------------------------------------
+2024.06.05
+
+java는 프로그램 언어
+pro + gram
+`미리 + 작성된 것` 의 합성어
+프로그램은 `미리 작성된 진행 계획이나 순서`
+
+컴퓨터 프로그램은 
+`컴퓨터에 일을 시키기 위해서 그 순서를 컴퓨터가 이해 할수 있는 언어로 기술한 것`
+
+프로그래밍 언어 (programing language)
+컴퓨터가 이해 할 수 있는 언어 (명령 전달을 위함)
+- java, c, c++ 등등...
+
+프로그래밍 언어의 특징
+1. 고급언어
+- 고급언어(사람한테 친한), 저급언어(컴퓨터한테 친한)중 자바는 고급언어
+2. managed language
+- 메모리 관리 자동으로
+3. compile 방식
+- 0,1를 변환해서 사용
+
+stackoverflow - 개발자 커뮤니티
+
+1. JVM (java virtual machine)
+자바 가상 머신의 약자
+OS 별로 존재
+바이너리 코드(0과1)를 읽고 검증하고 실행
+
+2.JRE (java runrime environment)
+자바 실행 환경의 약자
+JRE = JVM + 자바 프로그램
+실행에 필요한 각종 라이브러리 파일 등을 담고있음
+
+3. JDK (java development kit)
+자바 개발 키트의 약자
+JDK = JRE + 개발에 필요한 도구
+통합 개발 도구로 컴파일러, 디버그 도구 등이 포함됨
+
+객체 지향 프로그래밍
+- 객체를 생성하고, 이 객체들을 연결해서 더 큰 프로그램을 완성하는
+기법을 객체 지향 프로그래밍(OOP)이라고 합니다.
+자바는 객체 지향 프로그래밍을 하기 위한 최적의 언어 입니다.
+Objeck
+Oriented
+Programming
+
+* 자바 설치
+JDK설치
+- https://www.oracle.com
+products 상단 메뉴클릭 -> JAVA 메뉴 클릭 -> downloads JAVA 클릭 
+하단에 JAVA11 설치 -> windows -> jdk-11.0.23_windows-x64_bin.zip
+
+- c:\program files\Java(폴더만들기)\jdk-11.0.23
+
+또는 
+products 상단 메뉴클릭 -> JAVA 메뉴 클릭 -> downloads JAVA 클릭 
+하단에 JAVA11 설치 -> windows -> jdk-11.0.23_windows-x64_bin.exe
+다운로드 하고 NEXT 설치 경로 확이 ->CLOSE
+ 경로 확인 -> c:\program files\Java\jdk-11.0.23
+
+//
+1. https://www.oracle.com/
+
+Next > Next(설치 경로 확인) > Close
+C:\Program Files\Java\jdk-11.0.23\
+
+C:\Users\KGITBANK.DESKTOP-9ITP31A>javac
+'javac'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+-----------------------------------------------------------------------------------------------------------------------
+2024.06.10
+
+*java 실행방법
+java.exe, javac.exe(컴파일실행) -> 환경변수 추가
+
+환경변수 추가( 어려움 ) 무조건 설치
+1. win키 누르고 -> 시스템 환경 변수 편집 검색 및 실행 -> 환경 변수 클릭
+-> 시스템변수 -> 새로만들기(시스템 변수)
+
+2. 변수 이름: JAVA_HOME
+    변수값: C:\Program Files\Java\jdk-11
+위와 같이 입력 후 확인 클릭
+
+3. Path(시스템 변수) -> 새로만들기 -> %JAVA_HOME%\bin
+-> 위로 이동(맨위로 보내기) -> 확인 -> 확인 -> 확인
+
+* cmd실행 후 차례대로 입력 및 값 확인
+C:\Users\user>java
+C:\Users\user>javac
+C:\Users\user>java -version
+java version "11.0.23" 2024-04-16 LTS
+
+*이클립스 설치
+1. https://www.eclipse.org/
+downlode -> 첫번째 반달모양 -> Downloda -> Downloda 
+
+다운로드 파일(eclipse-inst-jre-win64.exe) -> 관리자 권한으로 실행
+ -> Eclipse IDE for Enterprise Java and Web Developers(두번째 톱니바퀴모양) 클릭
+-> Installation folder -> C:\Program Files 로 설치 경로 변경 -> install클릭 -> Accept now 클릭
+ -> 설치 완료 시 LAUNCH버튼 클릭
+
+*워크 스페이스
+1. C:에 DailyJava1폴더 생성
+2. 이클립스에서 Workspace경로 지정(C:\DailyJava1) 및 Lauch클릭
+(windows defender exclusion check 팝업창 뜨면 처음 라디오 버튼 클릭하고 오케이)
+3. welcome -> X클릭
+4. Window -> Perspective -> Open Perspective -> Java 순서대로 클릭
+5. Window -> Show View -> Console 순서 대로 클릭
+
+
+* 자바 프로젝트 생성(Project > Package(폴더) > Class(파일)) -> 매일매일 해줘야됨
+1. File > New > Java Project메뉴 클릭
+-project name -> java1
+-JRE : use an execution envirmnment jre -> javaSE-11 선택( 자바 버전 맞춰야됨 )
+
+2. 왼쪽 창 리스트중에 
+JAVA1 아래 > 클릭 > src -> 마우스 오른쪽버튼 -> new -> package -> new java package 창 뜸
+Name에 Chapter1입력> Finish
+
+3. Chapter1 마우스 오른쪽 클릭 > New 클릭 > class클릭
+name: EX01 > public static void main(string[] args) 체크 > Finish
+
+***********************************************************************************************
+package Chapter1; //패키지 선언부
+
+public class EX01 { //클래스 선언부(반드시 소스 파일 명과 동일 해야함)
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello, Java"); //메소드 선언부(main메소드 > entry point(프로그램 실행 진입점))
+		//출력(print)- 현재 무엇을 하는지 알수 있도록 인자를 출력 System.out.print(인자), System.out.println(인자) 두가지가 있다.
+	}
+
+}
+
+***********************************************************************************************
+
+package Chapter1;
+
+public class EX02 {
+	public static void main(String[] args) {
+		// 문자열 출력
+		System.out.println('s');
+		System.out.println("String");
+		
+		// 숫자 출력
+		System.out.println(10);
+		System.out.println(20);
+		
+		// 줄바꿈
+		System.out.println();
+		
+		// 숫자 연산 결과 출력
+		System.out.println(1+10);
+		System.out.println(2+20);
+		System.out.println(3+30);
+		
+		// 하나만 출력하기
+		System.out.println("Hello, World");
+		
+		// 여러개 출력하기
+		System.out.println("Hello, World" + 999 + 'J');
+	}
+}
+
+
+***********************************************************************************************
+
+package Chapter1;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("내가 좋아하는 과일 순서");
+		System.out.print("1. 샤인 머스켓");
+		System.out.print("2. 복숭아");
+		System.out.print("3. 망고");
+		// println(출력 + 개행) , print(출력)
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------
+20240611(화)
+
+package Chapter1;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("\\(^-^)/");
+		
+		System.out.println("HELLO\nJAVA");
+		System.out.println("HELLO\tJAVA");
+		System.out.println("내 이름은 \"펭수\"입니다.");
+		System.out.println("내 이름은 \'펭수\'입니다.");
+		System.out.println("내 이름은 \\펭수\\입니다.");	
+	}
+
+}
+***********************************************************************
+package Chapter1;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 정수 자료형
+		System.out.println(10/3); // 정수
+		System.out.println(10/3.0); // 소수점나타낼때
+		System.out.println(10%3); // 나머지
+		
+		System.out.println(1000000000 + 2000000000);
+		System.out.println(1000000000L + 2000000000L); // 더큰값을 구할때 long(뒤에 L 입력)
+		
+		System.out.println('a'); //char 홀따움표
+		System.out.println('a' + 1);
+		System.out.println('a' - 1);
+	}
+}
+
+
+***********************************************************************
+
+package Chapter1;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 실수 자료형
+		// double(소수점 최대 16자리)
+		System.out.println(1.2345678901234567890123456789);
+		
+		// float(소수점 최대 7자리)
+		System.out.println(1.2345678901234567890123456789f);
+	}
+
+}
+
+***********************************************************************
+
+package Chapter1;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 논리 자료형
+		System.out.println(true);
+		System.out.println(false);
+		
+		// 논리형 자료형을 만들어 낼 수 있는 연산
+		System.out.println(10 > 3);
+		System.out.println(11 * 11 < 10 * 12);
+	}
+
+}
+
+***********************************************************************
+package Chapter1;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// 문자열 자료형
+		System.out.println("String");
+		
+		System.out.println("2024-06-11");
+		System.out.println(2024-06-11);
+		
+		// + 연산에서 자동 타입 변환
+		System.out.println("hello" + "java");
+		System.out.println("hello" + 100); // 문자 + 정수 = 문자 정수
+		System.out.println(100 + 200); // 정수 + 정수 = 정수
+		System.out.println(123.456 + 789); //실수 + 정수 = 실수
+		
+	}
+
+}
+
+***********************************************************************
+
+package Chapter1;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		// 꿀팁1( crtl + / 단축키)
+		System.out.println("String");
+		System.out.println("2024-06-11");
+		System.out.println(2024-06-11);
+		System.out.println("hello" + "java");
+		System.out.println("hello" + 100); 
+		System.out.println(100 + 200);
+		System.out.println(123.456 + 789);
+		
+		// 꿀팁2 (println 자동완성 -> Syso 입력후 crtl + 스페이스바 + 엔터)
+		System.out.println();
+		
+		// 꿀팁3 (실행화면 -> Syso 입력후 crtl + f11)
+		System.out.println("콘솔 실행");
+	}
+
+}
+
+***********************************************************************
+package Chapter2;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 변수 생성 방법1
+		int a1;
+		a1 = 10;
+		
+		System.out.println(a1);
+		
+		// 변수 생성 방법2
+		int a2 = 20;
+		System.out.println(a2);
+		
+		// 변수 생성 방법3
+		int a3 = a2;
+		System.out.println(a3);
+	}
+
+}
+***********************************************************************
+* 이스케이프 문자(Escape Sequence)
+이스케이프 문자는 문자열을 출력하기 위해서 
+사용되는 기능 외의 부가적인 기능을 사용하기 위해 쓰이는 문자
+
+1. \n -> 다음줄로 이동
+2. \t -> tab기능
+3. \' -> '문자
+4. \" -> "문자
+5. \\ -> \문자
+
+** 자료형
+* 정수 자료형 
+소수점이 없는 숫자 = "정수"
+- byte, short, int, long 여러가지 타입이 존재(크기가 서로 다르다.)
+- int를 기본타입으로 많이 사용하며, long의 경우 "L"형태로 표현하여 사용
+- char라는 타입도 존재하며, 각 글자에 번호 값을 붙인 특수한 숫자 값(유니코드)을 표현
+- 유니코드는 세계각국의 문자를 2byte로 표현할수 있는 숫자 (0~65535)로 매핑한 국제 표준 규약으로 
+자바는 이러한 유니코드를 저장하료수 있도록 2byte 크기인 char타입을 제공
+
+*실수/논리 자료형
+소수점이 있는 숫자 ="실수"
+- float, double 타입이 존재(크기가 서로 다르다.)
+- double을 기본 타입으로 많이 사용하며, float의 경우 "f" 형태로 표현하여 사용
+
+판정을 위한 데이터를 논리라 부름
+- True/False 단 두개의 값만 가질수 있음
+- 숫자처럼 계산이 불가능( 주의 : 다른 언어에서 처럼 0과1을 JAVA에서는 논리로 사용할수 없음)
+
+*문자형 자료형
+char 데이터가 줄지어 있는 형태로 Java에서 String 클래스를 사용함
+- 대부분의 데이터는 전부 문자열 형태로 구성
+- 문자열 데이터는 쌍따옴표("") 를 이용하여 데이터를 감싼 뒤 표현
+- 기본 자료형이 아니며, 길이가 자유자재로 변함(이러한 형태를 참조형이라 부름)
+- 기본 데이터 형태는 아니지만 자바에서 특별히 기본 데이터처럼 쓸수 있도록 지원하는 유형
+- 문자열은 계산식 중 "+"만 사용가능
+
+** 변수
+- 데이터 또는 자료를 저장하기 위한 메모리의 공간 (값을 넣고 뺄수가 있다)
+
+*변수 선언 방식
+
+- 변수 생성 방법 1: 선언 후 초기화
+자료형 변수명;
+변수명 = 값;
+
+- 변수 생성방법 2: 선언과 동시에 초기화
+자료형 변수명 = 값;
+
+- 변수 생성방법 3: 다른변수를 활용하여 초기화
+자료형 변수명1 = 값;
+자료형 변수명2 = 변수명1;
+
+* 변수 작명 규칙
+- 영문자 대/소문자, 숫자, _(underline), $의 조합으로만 구성
+- 숫자의 경우 가장 첫 글자로 사용불가
+- 다른 곳에서 사용되고있는 이름을 사용불가
+- 변수명에서는 공백 포함 불가
+- 3~10글자 짧은 단어
+
+* 자료형 변환
+-promotion: 작은 범위의 자료형은 큰 범위의 자료형 대입
+long= int
+int = short
+short = byte
+
+- Casting: 큰 범위의 자료 형을 작은 범위의 자료 형 대입
+intlong
+short= int 
+byte= short 
+
+byte(1byte) < short(2byte), char(2byte) < int(4byte) < long(8byte) < float(4byte) < double(8byte)
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+2024.06.12 (수)
+
+package Chapter2;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 자료형 변환
+		int s1 = 10; // 4byte
+		// promotion 은 자동으로 형변함됨
+		long s2 = s1; //8byte
+		short s3; //2byte
+		
+		//Casting 은 형변환이 필요함
+		s3 = (short)s1;
+
+		System.out.println(s2);
+		System.out.println(s3);
+	}
+
+}
+
+
+***********************************************************************
+package Chapter2;
+
+public class EX03 {
+
+	public static void main(String[] args) throws Exception{
+		// 입력 - read() 메서드 사용
+		int key = System.in.read();
+		System.out.println(key);
+		
+		key = System.in.read();
+		System.out.println(key);
+		
+		key = System.in.read();
+		System.out.println(key);
+	}
+
+}
+
+
+***********************************************************************
+
+package Chapter2;
+
+import java.util.Scanner;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 입력 - Scanner 사용
+		java.util.Scanner scanner = new Scanner(System.in);
+		String data;
+		
+		data =  scanner.nextLine();
+		System.out.println(data);
+		
+		scanner.close();
+
+	}
+
+}
+
+
+***********************************************************************
+
+package Chapter2;
+
+import java.util.Scanner;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 입력 - Scanner 의 다양한 메서드 사용
+		Scanner input = new Scanner(System.in);
+		String st;
+		int num;
+		float f;
+		
+		System.out.print("문자 입력: ");
+		st = input.nextLine();
+		System.out.println("문자 출력: " + st);
+		
+		System.out.print("숫자 입력: ");
+		num = input.nextInt();
+		System.out.println("숫자 출력: " + num);
+				
+		System.out.print("실수 입력: ");
+		f = input.nextFloat();
+		System.out.println("실수 출력: " + f);
+
+		input.close();
+	}
+
+}
+
+
+***********************************************************************
+
+package Chapter2;
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String  name = "김말이";
+		int age = 20;
+		float height = 173.3f;
+		int iq = 120;
+		char grade = 'B';
+		
+		System.out.println("이름\t: " + name);
+		System.out.println("나이\t: " + age);
+		System.out.println("키\t: " + height);
+		System.out.println("아이큐\t: " + iq);
+		System.out.println("등급\t: " + grade);
+			
+	}
+
+}
+
+
+***********************************************************************
+
+package Chapter2;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 자료형 변환
+		int s1 = 10; // 4byte
+		// promotion 은 자동으로 형변함됨
+		long s2 = s1; //8byte
+		short s3; //2byte
+		
+		//Casting 은 형변환이 필요함
+		s3 = (short)s1;
+
+		System.out.println(s2);
+		System.out.println(s3);
+	}
+
+}
+
+
+***********************************************************************
+
+package Chapter2;
+
+import java.util.Scanner;
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		String name;
+		int kor, eng, math;
+		
+		System.out.print("당신의 이름은 무엇입니까? ");
+		name = input.nextLine();
+		
+		System.out.print(name + " 님의 국어 점수: ");
+		kor = input.nextInt();
+		
+		System.out.print(name + " 님의 영어 점수: ");
+		eng = input.nextInt();
+		
+		System.out.print(name + "님 의 수학 점수: ");
+		math = input.nextInt();
+		
+		System.out.println();
+		
+		System.out.println("=====================================================");
+		System.out.println("이 름 : " + name );
+		System.out.println("국 어 : " + kor );
+		System.out.println("영 어 : " + eng );
+		System.out.println("수 학 : " + math );
+		System.out.println("=====================================================");
+		System.out.println("합 계 : " + (kor + eng + math));
+		System.out.println("=====================================================");
+		
+		input.close();
+
+	}
+
+}
+
+
+***********************************************************************
+
+package Chapter2;
+
+import java.util.Scanner;
+
+public class Quiz4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		
+		System.out.print("키: ");
+		float height = input.nextFloat();
+		
+		System.out.print("몸무게: ");
+		float weight = input.nextFloat();
+		
+		float bmi = weight / ((height * height) / 10000);
+		
+		System.out.println("bmi: " + bmi);
+		
+		input.close();
+	}
+
+}
+
+
+***********************************************************************
+
+**입력(input)
+1. 사용자로부터 값을 입력 받아 코드 안에서 사용
+int 변수명 = System.in.read();
+
+2. 키코드는 키를 숫자로 대응시킨 것으로 키를 입력시 숫자로 된 키코드를 읽음
+
+3. 사용자로부터 값을 입력 받아 코드 안에서 사용
+Scanner scanner(변수명) = new Scanner(System.in);
+String 변수 = scanner.nextLine();
+
+-Scanner 를 사용하여 입력 작업을 수행 할 수 있으며, 아래와 같은 메서드를 포함하고 있음.
+* next() - 문자열 한 개를 공백을 기준으로 읽음
+* nextInt() - int값 한개를 공백을 기준으로 읽음
+* nextFloat() - float값 한개를 공백을 기준으로 읽음
+* nextDouble()- double값 한개를 공백을 기준으로 읽음
+* nexLine() - 문자열을 개행 기준으로 읽음
+* close() - 입력을 마친 후 종료
+
+
+------------------------------------------------------------------------------------------------------------------------
+2024.06.13(목)
+
+package Chapter3;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 산술 연산자
+		int data1, data2;
+		data1 = data2 = 5;
+		
+		System.out.println(data1 + "+" + data2 + "=" + (data1 + data2));
+		System.out.println(data1 + "-" + data2 + "=" + (data1 - data2));
+		System.out.println(data1 + "*" + data2 + "=" + (data1 * data2));
+		System.out.println(data1 + "/" + data2 + "=" + (data1 / data2));
+		System.out.println(data1 + "%" + data2 + "=" + (data1 % data2));
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter3;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 대입 & 복합 대입 연산자
+		int data1, data2;
+		data1 = data2 = 5;
+		System.out.println("data1 + 1 = " + (data1 += 1)); //data1 = data1 + 1
+		System.out.println("data1 - 1 = " + (data1 -= 1)); //data1 = data1 - 1
+		
+		System.out.println("data1 * data2 = " + (data1 *= data2));
+		System.out.println("data1 / data2 = " + (data1 /= data2));
+		System.out.println("data1 % data2 = " + (data1 %= data2));
+		
+	}
+
+}
+
+
+***********************************************************************
+package Chapter3;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 관계 연산자
+		int data1 = 2; double data2 = 2.1;
+		
+		System.out.println("data1 < data2 : " + (data1 < data2));
+		System.out.println("data1 > data2 : " + (data1 > data2));
+		System.out.println("data1 <= data2 : " + (data1 <= data2));
+		System.out.println("data1 >= data2 : " + (data1 >= data2));
+		System.out.println("data1 == data2 : " + (data1 == data2));
+		System.out.println("data1 != data2 : " + (data1 != data2));
+
+	}
+
+}
+
+***********************************************************************
+package Chapter3;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 논리 연산자
+		System.out.println("False || False : " + (false || false));
+		System.out.println("False || True : " + (false || true));
+		System.out.println("True || False : " + (true || false));
+		System.out.println("True || False : " + (true || true));
+		
+		System.out.println("False && False : " + (false && false));
+		System.out.println("False && True : " + (false && true));
+		System.out.println("True && False : " + (true && false));
+		System.out.println("True && False : " + (true && true));
+		
+		System.out.println("!True : " + !true);
+		System.out.println("!False : " + !false);
+		
+	}
+
+}
+***********************************************************************
+
+package Chapter3;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 증감 연산자
+		double su = 11.2;
+		
+		su++; System.out.println("su++: " + su); //su = su + 1
+		++su; System.out.println("++su: " + su);
+		su--; System.out.println("su--: " + su); //su = su - 1
+		--su; System.out.println("--su: " + su);
+		
+		int data1, data2, data3;
+		data1 = 10; data2 = ++data1; //먼저 +1되고 저장
+		data1 = 10; data3 = data1++; // 저장하고 +1됨 그래서 data1 = 11이됨 하지만 data3 은 먼저 저장되었기때문에 10
+		
+		System.out.println("data2: " + data2);
+		System.out.println("data3: " + data3);
+
+	}
+
+}
+
+***********************************************************************
+package Chapter3;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 조건 연산자
+		int data1 = 8;
+		String s = (data1 % 2 == 0) ? "짝수" : "홀수";
+		System.out.println(data1 + "=" + s);
+		
+		int data2 = 9;
+		String t = (data2 % 2 == 0) ? "짝수" : "홀수";
+		System.out.println(data2 + "=" + t);
+				
+	}
+
+}
+
+***********************************************************************
+package Chapter3;
+
+import java.util.Scanner;
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// 
+		Scanner input = new Scanner(System.in);
+		String id, pw;
+		
+		System.out.print("ID를 입력하세요: ");
+		id = input.nextLine();
+		System.out.print("PW를 입력하세요: ");
+		pw = input.nextLine();
+	
+		System.out.println();
+		
+		System.out.println("============= 회원가입 완료 ===============");
+		System.out.println("ID: " + id);
+		System.out.println("PW: " + pw);
+		
+		System.out.println();
+		
+		String birthday;
+		
+		System.out.print("출생년도 8자리 입력: ");
+		birthday = input.nextLine();
+		System.out.println("년:" + birthday.substring(0,4) + " 월:" +  birthday.substring(4, 6) + " 일:" + birthday.substring(6, 8));
+		
+		System.out.println();
+		
+		System.out.print("출생년도 8자리 입력: ");
+		birthday = input.nextLine();
+		
+		String year = birthday.substring(0,4);
+		Integer number = Integer.valueOf(year);
+		
+		System.out.println("나이:" + ((2024 - number) + 1));
+
+		System.out.println();
+		
+		int startHour, startMinute,  endHour, endMinute;
+		
+		System.out.print("진입시간 입력: ");
+		startHour = input.nextInt();
+		startMinute = input.nextInt();
+		
+		
+		System.out.print("진출시간 입력: ");
+		endHour = input.nextInt();
+		endMinute = input.nextInt();
+		
+		int startH = (24 - startHour) * 60;
+		int endH = (24 - endHour) * 60;
+		int start =  startH + startMinute;
+		int end =  endH + endMinute;
+		
+		int time = end - start;
+		int hour = time / 60;
+		int minute = time % 60 ;
+		
+		System.out.print("주차시간: " + (hour * -1) + "시간 " + minute + "분");
+		
+		input.close();
+	}
+
+}
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("숫자를 입력: ");
+		int num = input.nextInt();
+		
+		if(num == 1) {
+			System.out.println("1입니다.");
+		}
+		
+		input.close();
+
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 예제 (**** 중요 ***)
+	
+		
+		if (true) {
+			System.out.println("true입니다.");
+		}
+		
+		if (false) {
+			System.out.println("false입니다.");
+		}
+	}
+
+}
+
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("숫자 입력: ");
+		int num = input.nextInt();
+		
+		if (num % 2 == 0) {
+			System.out.println(num + "은 짝수 입니다");
+		}
+		
+		if (num % 2 != 0) {
+			System.out.println(num + "은 홀수 입니다");
+		}
+		
+		input.close();
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("숫자 입력: ");
+		int num = input.nextInt();
+		
+		if (num % 2 == 0) {
+			System.out.println(num + "은 짝수 입니다.");
+		} else {
+			System.out.println(num + "은 홀수 입니다.");
+		}
+		input.close();
+	}
+
+}
+
+***********************************************************************
+
+** 연산자
+
+** 조건문
+
+* if 조건문 기본 구조
+if(조건식) {
+	실행코드
+}
+
+* if - else 조건문 기본 구조
+
+if(조건식) {
+	실행코드
+} else {
+	실행코드
+}
+
+
+------------------------------------------------------------------------------------------------------------------------
+20240617(월)
+
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 세 수를 입력받아 큰 수를 출력
+		Scanner input = new Scanner(System.in);
+		
+		int num1, num2, num3;
+		
+		System.out.print("숫자 입력: ");
+		num1 = input.nextInt();
+		System.out.print("숫자 입력: ");
+		num2 = input.nextInt();
+		System.out.print("숫자 입력: ");
+		num3 = input.nextInt();
+		
+		if(num1 >= num2 && num1 >= num3) {
+			System.out.println(num1 + "이 큰 수 입니다.");
+		} if(num2 >= num1 && num2 >= num3) {
+			System.out.println(num2 + "이 큰 수 입니다.");
+		} else {
+			System.out.println(num3 + "이 큰 수 입니다.");
+		}
+		
+		
+		
+		input.close();
+		
+		// 1, 2, 3 입력시 > OK
+		// 1, 3, 2 입력시 > OK
+		// 3, 1, 2 입력시 > Error
+		// -> error 나는 이유, if ~ else 는 조건이 2개 일때만 써야되므로 답은 ex05_1 확인
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX05_1 {
+
+	public static void main(String[] args) {
+		// 세 수를 입력받아 큰 수를 출력
+		Scanner input = new Scanner(System.in);
+		
+		int num1, num2, num3;
+		
+		System.out.print("숫자 입력: ");
+		num1 = input.nextInt();
+		System.out.print("숫자 입력: ");
+		num2 = input.nextInt();
+		System.out.print("숫자 입력: ");
+		num3 = input.nextInt();
+		
+		//해결1
+		if(num1 >= num2 && num1 >= num3) {
+			System.out.println(num1 + "이 큰 수 입니다.");
+		} if(num2 >= num1 && num2 >= num3) {
+			System.out.println(num2 + "이 큰 수 입니다.");
+		} if (num3 >= num1 && num3 >= num2) {
+			System.out.println(num3 + "이 큰 수 입니다.");
+		}
+		
+		//해결2 (별로 좋지 않은 코드)
+		if(num1 >= num2 && num1 >= num3) {
+			System.out.println(num1 + "이 큰 수 입니다.");
+		} else {
+			if(num2 >= num1 && num2 >= num3) {
+				System.out.println(num2 + "이 큰 수 입니다.");
+			} else {
+				System.out.println(num3 + "이 큰 수 입니다.");
+			}
+		}
+		
+		//해결3
+		if(num1 >= num2 && num1 >= num3) {
+			System.out.println(num1 + "이 큰 수 입니다.");
+		} else if(num2 >= num1 && num2 >= num3){
+			System.out.println(num2 + "이 큰 수 입니다.");
+		} else {
+			System.out.println(num3 + "이 큰 수 입니다.");
+		}
+				
+		input.close();
+		
+		// 1, 2, 3 입력시 > OK
+		// 1, 3, 2 입력시 > OK
+		// 3, 1, 2 입력시 > OK
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 세 수를 입력받아 큰 수를 출력( if ~ else if ~ else 문)
+		Scanner input = new Scanner(System.in);
+		
+		int num1, num2, num3;
+		
+		System.out.print("숫자 입력: ");
+		num1 = input.nextInt();
+		System.out.print("숫자 입력: ");
+		num2 = input.nextInt();
+		System.out.print("숫자 입력: ");
+		num3 = input.nextInt();
+		
+		if(num1 >= num2 && num1 >= num3) {
+			System.out.println(num1 + "이 큰 수 입니다.");
+		} else if(num2 >= num1 && num2 >= num3){
+			System.out.println(num2 + "이 큰 수 입니다.");
+		} else {
+			System.out.println(num3 + "이 큰 수 입니다.");
+		}
+				
+		input.close();
+
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// Switch - case - default 문 기본구조( 간단한 data 식이면 switch 문으로 예를들어 0, 1 , 2 이런식의 데이터일 경우 )
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수 입력: ");
+		int num = input.nextInt();
+		
+		switch(num % 2) {
+			case 0 : System.out.println(num + "은 짝수 입니다."); break;
+			default: System.out.println(num + "은 홀수 입니다."); break;
+		}
+		
+		input.close();
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수 입력: ");
+		int num = input.nextInt();
+		
+		switch((num * num) / num) {
+			case 1: System.out.println("월요일"); break;
+			case 2: System.out.println("화요일"); break;
+			case 3: System.out.println("수요일"); break;
+			case 4: System.out.println("목요일"); break;
+			case 5: System.out.println("금요일"); break;
+			case 6: System.out.println("토요일"); break;
+			case 7: System.out.println("일요일"); break;
+		}
+		
+		input.close();
+		
+	}
+
+}
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("첫 번째 정수 입력: ");
+		int num1 = input.nextInt();
+		
+		System.out.print("두 번째 정수 입력: ");
+		int num2 = input.nextInt();
+		
+		if (num1 > num2) {
+			System.out.println("큰 값: " + num1 + " 작은 값: " + num2);
+		} else {
+			System.out.println("큰 값: " + num2 + " 작은 값: " + num1);
+		}
+		
+		input.close();
+
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("국어 점수 입력: ");
+		int kor = input.nextInt();
+		
+		System.out.print("영어 점수 입력: ");
+		int en = input.nextInt();
+		
+		System.out.print("수학 점수 입력: ");
+		int math = input.nextInt();
+		
+		if((kor + en + math) / 3 >= 70) {
+			System.out.println("합격!");
+		} else if(kor <= 60) {
+			System.out.println("불합격!");
+		} else if(en <= 60) {
+			System.out.println("불합격!");
+		} else if(math <= 60) {
+			System.out.println("불합격!");
+		} else {
+			System.out.println("불합격!");
+		}
+
+		input.close();
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Quiz4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수 입력: ");
+		int year = input.nextInt();
+		
+		if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+			System.out.println("윤년");
+		} else if(year % 4 == 0 && year % 100 == 0) {
+			System.out.println("윤년");
+		} else if (year % 4 == 0) {
+			System.out.println("윤년");
+		} else {
+			System.out.println("평년");
+		}
+		
+		input.close();
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Quiz5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수 입력: ");
+		int year = input.nextInt();
+		
+		if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+			System.out.println("윤년");
+		} else {
+			if(year % 4 == 0 && year % 100 == 0){
+				System.out.println("윤년");
+			}else {
+				if(year % 4 == 0) {
+					System.out.println("윤년");
+				}else {
+					System.out.println("평년");
+				}
+			}
+		}
+		
+		input.close();
+
+	}
+
+}
+***********************************************************************
+package Chapter5;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 문자열 10번 출력
+		for(int i = 0; i < 10; i++) {
+			System.out.println("JAVA STRING!");
+		}
+		
+		System.out.println();
+		
+		// 숫자 10까지 출력
+		for(int i = 0; i <= 10; i++) {
+			System.out.println(i);
+		}
+	}
+
+}
+
+***********************************************************************
+
+** 조건문
+*if - else if - else 조건문 기본구조
+if(조건식) {
+	실행코드
+} else if(조건식) { 
+	실행코드
+} else {
+	실행코드
+}
+
+* Switch - case - default문 기본구조
+switch (data) {
+	case data: 실행코드; break;
+	case data: 실행코드; break;
+	case data: 실행코드; break;
+	default: 실행코드; break;
+}
+
+** 반복문
+-for 반목문 기본구조
+
+for(초기식; 조건식; 증감식){
+	실행코드
+}
+
+ex)
+for( i=0; i<10; i++;){ 
+	실행코드
+}
+
+------------------------------------------------------------------------------------------------------------------------
+20240618(화)
+
+package Chapter5;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 문자열을 반복문 횟수를 역순으로 하여 10번 출력
+		for(int i = 10; i > 0; i--) {
+			System.out.println("JAVA STRING!");
+		}	
+
+		System.out.println();
+		
+		// 문자열을 반복문 횟수를 역순으로 하여 10번 순서 확인 및 출력
+		for(int i = 10; i > 0; i--) {
+			System.out.println(i + "번 JAVA STRING!");
+		}
+		
+	}
+}
+
+***********************************************************************
+package Chapter5;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 0 - 10 까지 한 줄로 출력
+		for(int i = 0; i <= 10; i++) {
+			System.out.print(i + " ");
+		}
+		
+		System.out.println();
+		
+		// 5 - 10 까지 한 줄로 출력
+		for(int i = 5; i <= 10; i++) {
+			System.out.print(i + " ");
+		}
+		
+		System.out.println();
+		
+		// 5 - 10 + "안녕" 한 줄로 출력
+		for(int i = 5; i <= 10; i++) {
+			System.out.print(i + "안녕 ");
+		}
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 1 ~ 10까지 합을 구하세요. 단, 반복문을 이용하세요.
+		
+		int sum = 0;
+		
+		for(int i = 1; i <= 10; i++) {
+			sum += i;
+		}
+		
+		System.out.println("1 ~ 10 까지 합은 " + sum + " 입니다.");
+		
+		
+		// *********************************************************************
+		// 선생님 풀이
+		
+		int iSum = 0;
+		
+		for(int i = 1; i <= 10; i++) {	
+			iSum = iSum + i;
+			System.out.println("합: " + iSum);
+		
+//			iSum = iSum + i; 풀이하여 합구하기
+//			합: 1	풀이 -> 1 = 0 + 1
+//			합: 3	풀이 -> 3 = 1 + 2
+//			합: 6	풀이 -> 6 = 3 + 3
+//			합: 10	풀이 -> 10 = 6 + 4
+//			합: 15	풀이 -> 15 = 10 + 5
+//			합: 21	풀이 -> 21 = 15 + 6
+//			합: 28	풀이 -> 28 = 21 + 7
+//			합: 36	풀이 -> 36 = 28 + 8
+//			합: 45	풀이 -> 45 = 36 + 9
+//			합: 55	풀이 -> 55 = 45 + 10
+		}
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// for 문과 조건문을 이용하여 아래와 같이 출력 하시오.
+		// (hint: 다섯번 출력하고 줄 바꿈이 이루어져야 하므로, 5의 배수 마다 출 바꿈 처리하도록 조건을 설정)
+		for(int i = 1; i <= 25; i++) {
+			if(i % 5 == 0) {
+				System.out.print(i + "\t");
+				System.out.println();
+			} else {
+				System.out.print(i + "\t");
+			}
+		}
+		
+		System.out.println();
+		
+		//선생님 풀이 (for + if)
+		for(int i = 1; i <= 25; i++) {
+			System.out.print(i + "\t");
+			if(i % 5 == 0) {
+				System.out.println();
+			}
+		}
+		
+		System.out.println();
+		
+		// 선생님 풀이 (for + if ~ else)
+		for(int i = 1; i <= 25; i++) {
+			if(i % 5 == 0) {
+				System.out.println(i + "\t");
+			} else {
+				System.out.print(i + "\t");
+			}
+		}
+	}
+
+}
+***********************************************************************
+package Chapter5;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 중첩 for 문 또는 이중 for 문
+		
+		for(int i = 0; i < 3; i++) {
+			System.out.println("첫번째 For문");
+			for(int a = 0; a < 2; a++ ) {
+				System.out.println("두번째 For문");
+			}
+		}
+		
+		System.out.println();
+		
+		//선생님 풀이
+		for(int i = 1; i < 4; i++) {
+			System.out.println("첫 번째 for문!");
+			for(int j = 1; j < 3; j++ ) {
+				System.out.println("두 번째 for문!");
+			}
+		}
+	}
+}
+
+***********************************************************************
+package Chapter5;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 1 ~ 10까지 짝수, 홀수 합을 for 문을 사용하여 구하여라.
+		
+		int sum1 = 0;
+		int sum2 = 0;
+		
+		for(int i = 1; i <= 10; i++) {
+			if(i % 2 == 0) {
+				sum1 += i;
+			} else {
+				sum2 += i;
+			}
+		}
+		
+		System.out.println("1 ~ 10 까지 짝수의 합: " + sum1);
+		System.out.println("1 ~ 10 까지 홀수의 합: " + sum2);
+		
+		System.out.println();
+		
+		// 선생님 풀이
+		
+		int evenSum = 0, oddSum = 0;
+		
+		for(int i = 1; i < 11; i++) {
+			if(i % 2 == 0) {
+				evenSum += i;
+			} else {
+				oddSum += i;
+			}
+		}
+		
+		System.out.println("짝수 합: " + evenSum + " 홀수 합: " + oddSum);
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// 1 ~ 10까지 짝수, 홀수 합을 while 문을 사용하여 구하여라.
+			
+		int i = 1;
+		int sum1 = 0;
+		int sum2 = 0;
+		
+		while(i <= 10) {
+			i++;
+			if(i % 2 == 0) {
+				sum1 += i;
+			} else {
+				sum2 += i;
+			}
+		}
+		
+		System.out.println("1 ~ 10 까지 짝수의 합: " + sum1);
+		System.out.println("1 ~ 10 까지 홀수의 합: " + sum2);
+		
+		System.out.println();
+		
+		// 선생님 풀이
+		
+		int j = 1;
+		int evenSum = 0, oddSum = 0;
+		
+		while(j < 11) {
+			if(j % 2 == 0) {
+				evenSum += j;
+			} else {
+				oddSum += j;
+			}
+		
+			j++;
+		}
+		
+		System.out.println("짝수 합: " + evenSum + " 홀수 합: " + oddSum);
+	}
+
+}
+***********************************************************************
+
+***********************************************************************
+** 반복문
+-중첩 for반복문 기본구조( for 문안에 있는 for문이 다 완료되어야지 다시 처음 for문으로)
+for(초기값; 조건식; 증감식){
+	for(초기값; 조건식; 증감식){
+		실행코드
+	}
+}
+
+- while 반복문 기본 구조( 조건식과 같은 구조, for 문처럼 계속 반복함)
+while(조건식) {
+	실행코드
+}
+
+------------------------------------------------------------------------------------------------------------------------
+20240619(수)
+
+package Chapter5;
+
+import java.util.Scanner;
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// 1 - 10까지 정수 입력 시 반복 종료 그외 정수 입력 시 다시 입력
+		
+		Scanner input = new Scanner(System.in);
+		
+		while(true) {
+			
+			System.out.print("10보다 작은 정수 입력: ");
+			int num = input.nextInt();
+
+			if(num <= 10) {
+				System.out.println(num + "은(는) 11보다 작습니다.");
+				break;
+			} else {
+				System.out.println("다시 입력해주세요!");
+				continue;
+			}
+		}
+		
+		input.close();
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		// do - while(무조건 do -> 한번은 실행되어야한다.)
+		int num = 0, numSum = 0;
+		do {
+			num++;
+			numSum += num;
+			
+		} while (num <= -1);
+		
+		System.out.println("do - while numSum: " + numSum);
+		
+		// while
+		num = 0; numSum = 0;
+		while (num <= -1) {
+			num++;
+			numSum += num;
+		}
+		
+		System.out.println("while numSum: " + numSum);
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int numSum = 0;
+		
+		int num = 10;
+		
+		for(int i = 1; i <= 3; i++) {
+			
+			num = num * 2 * i;
+			numSum += num;
+			
+			
+			System.out.println(i);
+			System.out.println(num);
+		}
+		
+		System.out.println(numSum + 10);
+		
+	}
+
+}
+***********************************************************************
+package Chapter5;
+
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		//
+
+		for(int i = 2; i <= 9; i++) {
+			for(int j = 1; j <= 9; j++) {
+				System.out.print(i + "X" + j + "=" + i * j + "\t");
+				if(j == 9) {
+					System.out.println();
+				}
+			}
+		}
+		
+		System.out.println();
+		
+		
+		int j;
+		
+		for(int i = 2; i <= 9; i++) {
+			
+			for(j = 1; j <= 9; j++) {
+				System.out.print(i + "X" + j + "=" + i * j + "\t");
+			}
+			
+			
+			if(i == 9) {
+				System.out.println();
+			}
+			
+		}
+		
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+import java.util.Scanner;
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		int numSum = 0;
+		
+		while(true) {
+			System.out.print("숫자 입력: ");
+			int num = input.nextInt();
+			
+			numSum += num;
+			
+			if(num == 0) {
+				System.out.println("입력한 숫자들으 합은: " + numSum);
+				break;
+			}
+		}
+		
+		input.close();
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class Quiz4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i = 1; i <= 55; i++ ) {
+			System.out.print("*  ");
+			if(i % 11 == 0) {
+				System.out.println();
+			}
+		}
+	}
+
+}
+
+***********************************************************************
+package Chapter5;
+
+public class Quiz5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int i = 1;
+		
+		while(i <= 55) {
+			System.out.print("*  ");
+			if(i % 11 == 0) {
+				System.out.println();
+			}
+			i++;
+		}
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name = "펭수"; //참조타입
+		String address = "남극"; //참조타입
+		String phone = "010-1234-5678"; //참조타입
+		int age = 20; //기본타입
+		
+		System.out.println(name);
+		System.out.println(address);
+		System.out.println(phone);
+		System.out.println(age);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ref_1 = "펭수";
+		String ref_2 = "펭수"; 
+		String ref_3 = "범이";
+		
+		System.out.println(ref_1 == ref_2);
+		System.out.println(ref_1 != ref_2);
+		System.out.println(ref_1 == ref_3);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ref_1 = "펭수";
+		String ref_2 = new String("펭수"); 
+		String ref_3 = "범이";
+		
+		System.out.println(ref_1 == ref_2);
+		System.out.println(ref_1 != ref_2);
+		System.out.println(ref_1 == ref_3);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ref_1 = "펭수";
+		String ref_2 = new String("펭수"); 
+		String ref_3 = "범이";
+		
+		System.out.println(ref_1.equals(ref_2));
+		System.out.println(ref_1.equals(ref_3));
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = new String("javaProgramming");
+		
+		System.out.println(str.length());
+		System.out.println(str.charAt(4));
+		
+		String addStr;
+		addStr = "A";
+		System.out.println(addStr);
+		addStr += "B";
+		System.out.println(addStr);
+		
+		System.out.println(str.charAt(0) == 'J');
+		System.out.println(str.charAt(0) == 'j');
+		
+		System.out.println(str.charAt(1) - 32);
+		System.out.println((char)(str.charAt(1) - 32));
+	}
+
+}
+
+***********************************************************************
+
+** while -  while 문은 조건식에 true가 오면 무한반복을 할수가 있다.
+1. break: 반복의 종료(while문에서 무한반복하면 종료)
+while(조건식) {
+	실행코드
+	break;
+}
+
+2. continue: 반복의 처음으로 이동
+while(조건식) {
+	실행코드
+	continue;
+}
+
+* do - while 반목문 기본구조 (
+- 무조건 한번은 시작되어야된다. 그다음 조건이 해당되면 다시 실행(반복)
+do {
+	실행코드
+} while (조건식);
+
+
+** 참조 타입
+- JVM Memory 구조
+1. Method
+- 클래스에서 사용되는 모든 코드 값을 저장
+
+2.Stack
+- 메서드의 정보를 프레임 형태로 저장
+새로운 메서드가 실행 될 때마다, 새로운 프레임이 Stack Memory에 저장 
+프레임 내부에는 지역 변수 스택이 존재하며, 지역변수 관리 작업을 수행
+
+3.Heap
+- 인스턴스 변수가 저장되는 영역(문자열, 배열, 클래스, 인터페이스 등)
+new 키워드를 이용하여 생성되는 값은 Heap영역에 저장
+
+* 기본타입 & 참조 타입
+1. 기본타입
+- 일반적인 정수, 실수, 단일문자, 논리 리터럴을 저장하는 타입
+- Stack Memory 영역에 데이터를 저장하는 공간을 생성
+- Stack Memory 영역에 실제 데이터를 저장
+
+2. 참조 타입
+- 객체의 주소값을 저장하는 타입(문자열, 배열, 클래스, 인터페이스)
+-Heap Memory 영역에 데이터 저장공간을 생성 및 데이터를 저장
+-Stack Memort 영역에는 Heap Memory의 주소 값을 저장
+
+* 참조 타입(String Class)
+-String Class : 자바에서 문자열 데이터를 정의할 때 사용되는 클래스
+java.lang.String 클래스에는 문자열과 관련 된 작업을 할 떄 유용한 다양한 메소드를 포함
+
+- 문자열 참조 변수의 저장 된 주소값 비교
+참조 변수에 저장 된 주소값을 비교할 떄에는 ("==", "!=")을 사용
+동일 한 리터럴 문자열값을 저장하는 참조 변수를 선언 할 경우 자바에서는 동일한 객체를 공유
+하도록 되어있음 새로운 객체를 생성 할 때에는 반드시"new" 연산자를 사용해야함
+(new 연산자 : 객체 생성 연산자)
+
+- 문자열 참조 변수가 가르키는 곳에 저장 된 데이터 값 비교
+객체의 주소값이 아닌 실제 객체에 저장 된 데이터 값을 비교하기 위해서는 ".equals()"메소드를 사용
+원본 문자열과 .equals() 메소드에 주어진 매개값을 직접 비교하고, 같으면 true, 다르면false를 반환
+EX) boolean flag = str1.equals(str2)
+
+* 참조타입(String Class Method & Operator)
+
+메서드         	 -               	  설명
+.length()       	 -    	 지정된 문자열의 길이값을 반환
+.charAt(index)	 -  	 지정된 index에 단일 문자값을 반환
+
++ operator - 기본 문자열 데이터에 새로운 문자값을 이어 붙임
+
+.toLowerCase() 	 -  	 지정된 문자열을 소문자로 반환
+.toUpperCase() 	 -  	 지정된 문자열을 대문자로 반환
+.replace("old","new")  -   	지정된 문자를 새로운 문자로 지환
+.split(regex)  	 -  	지정 된 값을 기준으로 문자열을 분리
+.split()  		 -   	배열을 이용하여 분리 된 문자열을 따로 저장
+trim() 		 - 	지정 된 문자열의 앞뒤 공백을 제거
+
+------------------------------------------------------------------------------------------------------------------------
+20240620(목)
+
+***********************************************************************
+package Chapter6;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = new String("Java is Easy");
+		System.out.println("기본: " + str);
+		
+		// 소문자, 대문자
+		System.out.println("소문자 변환: " + str.toLowerCase());
+		System.out.println("대문자 변환: " + str.toUpperCase());
+		
+		String changeStr = new String();
+		changeStr = str.replace("Easy" , "Hard");
+		System.out.println("문자열 치환: " + changeStr);
+		
+		String[] arrStr = str.split("is");
+		System.out.println("문자열 분리: " + arrStr[0] + "*"); 
+		System.out.println("문자열 분리: " + "*" +  arrStr[1]);
+		// * 을 입력한 이유 배열로 잘라도 공백까지 저장됨! (실행화면 보면 알수 있음)
+		
+		String[] arrStr2 = str.split("is");
+		arrStr2[0] = arrStr[0].trim();
+		arrStr2[1] = arrStr[1].trim();
+		// .trim() - 앞뒤 공백 제거
+		
+		System.out.println("문자열 분리: " + arrStr2[0] + "*"); 
+		System.out.println("문자열 분리: " + "*" +  arrStr2[1]);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 배열 1번째 방식
+		int[] arrayInt1 = new int[10];
+		// 기본 정수는 저장값이 0, 실수는 0.0, 참조타입은 null 값으로 저장
+		// 예) 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 -> 정수 타입 
+		// 예) 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 -> 실수 타입 
+		// 예) null, null, null, null, null, null, null, null, null, null -> 참조 타입 
+		
+		//초기화
+		arrayInt1[0] = 1;
+		arrayInt1[9] = 10;
+		
+		//출력
+		System.out.println(arrayInt1[0]);
+		System.out.println(arrayInt1[9]);
+		
+		System.out.println(arrayInt1[7]);
+		
+		int[] arrayInt2 = new int[3];
+		
+		System.out.println(arrayInt2[0]);
+		System.out.println(arrayInt2[1]);
+		System.out.println(arrayInt2[2]);
+		
+		System.out.println(arrayInt2[3]);
+		// java.lang.ArrayIndexOutOfBoundsException:
+		// Index 3 out of bounds for length 3
+		// 위의 오류는 잘못된 인덱스 배열에 접근할때 나오는 에러 메시지! 많이 나올듯..
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// 배열 2번째 방식
+		int[] arrayInt3 = new int[] {10, 20, 30};
+		// 배열 3번째 방식
+		int[] arrayInt4 = {40, 50, 60, 70};
+		
+		System.out.println(arrayInt3[0]);
+		System.out.println(arrayInt3[1]);
+		System.out.println(arrayInt3[2]);
+		
+		System.out.println(arrayInt4[0]);
+		System.out.println(arrayInt4[1]);
+		System.out.println(arrayInt4[2]);
+		System.out.println(arrayInt4[3]);
+ 
+		System.out.println(arrayInt3[0] + arrayInt4[1]);
+		
+		// 배열 4번째 방식
+		int[] arrayInt5;
+		arrayInt5 = new int[] {80, 90};
+		System.out.println(arrayInt5[0]);
+		System.out.println(arrayInt5[1]);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// 인덱스 출력(정수 배열)
+		int[] arrayInt1 = new int[10];
+		
+		for (int i = 0; i < arrayInt1.length; i++) {
+			System.out.println(i);
+		}
+		
+		System.out.println();
+		
+		// 값 출력(정수 배열)
+		int[] arrayInt2 = {1, 3, 5, 7, 9};
+		for (int i = 0; i < arrayInt2.length; i++) {
+			System.out.println(arrayInt2[i]);
+		}
+		
+		System.out.println();
+		
+		// 인덱스 출력(문자열 배열)
+		String[] arrayStr1 = new String[10];
+		for(int i = 0; i < arrayStr1.length; i++) {
+			System.out.println(i);
+		}
+		
+		System.out.println();
+		
+		// 값 출력(문자열 배열)
+		String[] arrayStr2 = {"A", "B", "C"};
+		for (int i = 0; i < arrayStr2.length; i++) {
+			System.out.println(arrayStr2[i]);
+		}
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		int[] arrayInt1 = new int[100];
+		
+		//1. 1 ~ 100까지 정수 값 담기 (for 문 사용)
+		for(int i = 0; i < arrayInt1.length; i++) {
+			arrayInt1[i] = i + 1;
+		}
+
+		//2. 1 ~ 100까지 정수 값 꺼내서 출력 (for 문 사용)
+		for(int i = 0; i < arrayInt1.length; i++) {
+			System.out.println(arrayInt1[i]);
+		}
+		
+		System.out.println();
+		
+		//3. 1 ~ 100까지 정수 합 구하여 출력 (for 문 사용)
+		int sum = 0;
+		
+		for(int i = 0; i < arrayInt1.length; i++) {
+			sum += arrayInt1[i];
+		}
+		
+		System.out.println("1 ~ 100 까지의 총 합은: " + sum);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX11 {
+
+	public static void main(String[] args) {
+		// 2차원 배열
+		int[][] arrayInt6 = new int[3][4];
+		
+		// 2차원 배열은 [][] 참조변수, 인덱스 다 입력해야됨.
+		//arrayInt6[0] = 10; -> error
+		//Type mismatch: cannot convert from int to int[]
+		
+		arrayInt6[0][0] = 10;
+		System.out.println(arrayInt6[0][0]);
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] arrayInt7 = new int[3][]; // 이렇게 사용해도 문제가 없긴함 (대신 초기화 해줘야댐)
+		// 배열 선언할때 참조변수만 입력했을경우 1차원 배열이 없어서 (
+		//값을 지정할수 없어서 error 가 남
+		// arrayInt7[0][0] = 10; -> error
+		// java.lang.NullPointerException
+		
+		
+		// 1차원 배열을 초기화시킴 -> 가변길이 변화 (1차원 배열 길이를 다 다르게 지정할수 있음)
+		arrayInt7[0] = new int[1];
+		arrayInt7[1] = new int[2];
+		arrayInt7[2] = new int[3];
+		
+		arrayInt7[0][0] = 10;
+		System.out.println(arrayInt7[0][0]);
+	
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arrayInt8 = {10, 20, 30, 40, 50};
+		
+		//for 문
+		for ( int i = 0; i < arrayInt8.length; i++) {
+			System.out.println(arrayInt8[i]);
+		}
+		
+		System.out.println();
+		
+		//for each 문
+		for(int num : arrayInt8) {
+			System.out.println(num);
+		}
+	}
+
+}
+
+***********************************************************************
+package Chapter6;
+
+public class EX14 {
+
+	public static void main(String[] args) {
+		// 배열 복사(방법1)
+		int[] oldArrayInt = {1,2,3};
+		//복사할 기존 배열보다 더 길게 해줘야됨
+		int[] newArrayInt = new int[5];
+
+		
+		//복사
+		for(int i = 0; i < oldArrayInt.length; i++) {
+			newArrayInt[i] = oldArrayInt[i];
+		}
+		
+		//출력
+		for(int i = 0; i < newArrayInt.length; i++) {
+			System.out.println(newArrayInt[i]);
+		}
+	}
+
+}
+
+***********************************************************************
+
+package Chapter6;
+
+public class EX15 {
+
+	public static void main(String[] args) {
+		// 배열 복사2(방법2)
+		String[] oldArraystr = {"C", "JAVA", "PYTHON"};
+		String[] newArraystr = new String[5];
+		
+		//복사
+		System.arraycopy(oldArraystr, 0, newArraystr, 0, oldArraystr.length);
+		
+		//출력
+		for(String str: newArraystr) {
+			System.out.println(str);
+		}
+
+	}
+
+}
+
+**********************************************************************
+
+** 배열(배열도 참조 타입임.)
+같은 타입의 데이터를 연속 된 공간에 나열하고, 인덱스를 부여해 놓은 자료 구조
+- 배열은 동일한 타입만 연속적으로 저장이 가능하고, 한 번 생성 된 배열의 크기는 조절 할 수 없음
+- 배열 작업시 사용가능한 기능
+[ 배열 길이 확인: .length , 배열 복사: System.arraycopy() ]
+- 배열의 인데스 번호는 항상  0"번 부터 시작
+
+*배열 선언 방법
+1. 타입[] 변수 = new 타입[길이];
+   변수[인덱스] = 값;
+2. 타입[] 변수 = new 타입[길이] {값0, 값1, 값2, 값3, ...};
+
+3. 타입[] 변수 =  {값0, 값1, 값2, 값3, ...};
+
+4. 타입[] 변수;
+   변수= new 타입[] {값0, 값1, 값2, 값3, ...};
+
+* 2차원 배열
+- 같은 타입의 데이터를 연속 된 공간에 나열하고, 인덱스를 부여해 놓은 2차원 자료구조
+ex) 참조변수 3번째의 4번째 인덱스
+     new int[3][4]
+
+
+** 배열이랑 같이 사용하는 구문
+for each문
+- 반복되는 자료 구조에서 값을 꺼낼 때 사용
+for(타입 변수: 배열){
+	실행문;
+}
+
+*배열 복사
+System.arraycopy()메서드 사용법
+-System.arraycopy(object src, int srcPos, object dest, int destPos, int length)
+원본 배열 객체, 원본배열에서 복사할 항목시작 인덱스,  새 배열 객체, 새 배열에서 붙여 넣을 시작 인덱스, 복사할 개수
+
+------------------------------------------------------------------------------------------------------------------------
+20240624(월)
+
+**********************************************************************
+package Chapter7;
+
+// field(필드)
+
+// 클래스명의 첫글자는 무조건 대문자로
+class Car {
+	String commpany = "제네시스";
+	String model = "GV90";
+	String color = "White";
+	int maxSpeed = 200;
+	int rpm;
+	int currentSpeed;
+	boolean enginStart;
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 객체 생성
+		Car car = new Car();
+		
+		// 필드 데이터 출력 (필드에 접근 할때에는 도트(".")연산자를 사용)
+		System.out.println("제조 회사: " + car.commpany);
+		System.out.println("차 모델명: " + car.model);
+		System.out.println("색상이름: " + car.color);
+		System.out.println("최대 속도: " + car.maxSpeed);
+		System.out.println("회전 속도: " + car.rpm);
+		System.out.println("현재 속도: " + car.currentSpeed);
+		System.out.println("시동 여부: " + car.enginStart);
+		
+		System.out.println();
+		
+		// 필드 값 변경
+		car.rpm = 3000;
+		car.currentSpeed = 77;
+		car.enginStart = true;
+		
+		System.out.println("회전 속도: " + car.rpm);
+		System.out.println("현재 속도: " + car.currentSpeed);
+		System.out.println("시동 여부: " + car.enginStart);
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter7;
+
+// method(메소드)
+
+// 1. 긴코드 축약
+class Hi {
+	// 접근 제어자 반환타입 (반환티입이 없으면 void 를 사용) 메서드명()
+	// public -> 접근 제어자
+	public void MethodTest_EX02() {
+		System.out.println("안녕하세요");
+		System.out.println("반갑습니다");
+		System.out.println("또 만나요");
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 1. hi 객체 생성
+		Hi hi = new Hi();
+		
+		// 2. 메소드 호출()
+		hi.MethodTest_EX02();
+		hi.MethodTest_EX02();
+		hi.MethodTest_EX02();
+	}
+
+}
+
+**********************************************************************
+package Chapter7;
+
+// method(메소드)
+
+//2. 마법 모자를 만들고 싶을때 (매개 변수) - 예) 1을 집어넣고 2가 나오는것
+class MagicHat {
+	public void MethodTest_EX03(int num) {
+		num += 1;
+		System.out.println(num);
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 1. MagicHat 객체 생성
+		MagicHat magicHat = new MagicHat();
+		
+		// 2. 메소드 호출(인자)
+		// -> 1을 넣을경우 2가 나오게..( 메서드에 인자값을 +1이 되게끔 작성했기때문에 결과가 +1이됨)
+		magicHat.MethodTest_EX03(1);
+		
+		magicHat.MethodTest_EX03(2);
+		magicHat.MethodTest_EX03(3);
+		magicHat.MethodTest_EX03(99);
+		magicHat.MethodTest_EX03(1000);
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter7;
+
+//3. 긴코드 축약 + 마법 모자를 만들고 싶을때(매개 변수)
+class Hi2 {
+	public void MethodTest_EX04(String name) {
+		System.out.println(name + "님 안녕하세요.");
+		System.out.println(name + "님 반갑습니다.");
+		System.out.println(name + "님 또만나요.");
+	}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 1. hi2 객체 생성
+		Hi2 hi2 = new Hi2();
+		
+		//2. 메소드 호출
+		hi2.MethodTest_EX04("장원영");
+		hi2.MethodTest_EX04("김석진");
+		hi2.MethodTest_EX04("변우석");
+	}
+
+}
+
+**********************************************************************
+package Chapter7;
+
+// 4. print 사용
+class Test1 {
+	public void MethodTest_EX05_01() {
+		System.out.println(10);
+	}
+	public void MethodTest_EX05_02() {
+		System.out.println(20);
+	}
+}
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 객체 생성
+		Test1 test1 = new Test1();
+		
+		// 메소드 호출
+		test1.MethodTest_EX05_01();
+		test1.MethodTest_EX05_02();
+		
+		System.out.println(test1.MethodTest_EX05_01() + test1.MethodTest_EX05_02());
+		// The operator + is undefined for the argument type(s) void, void 
+		// 위와 같이 에러남 -> test1의 메소드에 void 은  비어있다는거임, 해결 방법은 EX06 확인바람
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter7;
+
+// 5. return 사용
+class Test2 {
+	// return 을 사용하여 값을 반환시켜줘야된다.
+	public int MethodTest_EX06_01() {
+		return 10;
+	}
+	public int MethodTest_EX06_02() {
+		return 20;
+	}
+}
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 객체 생성
+		Test2 test2 = new Test2();
+		
+		// 메소드 호출
+		System.out.println(test2.MethodTest_EX06_01());
+		System.out.println(test2.MethodTest_EX06_02());
+		
+		System.out.println(test2.MethodTest_EX06_01() + test2.MethodTest_EX06_02());
+		// test2 메소드에 int 타입 이라는 값이 반환됐기 때문에 + 을 사용할수가 있음
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter7;
+
+// 6. 지역변수 - 블록 내에서만 사용
+class MethodLocalVariable {
+	public void MethodTestEX07_01() {
+		int a = 10, b = 20;
+		MethodTestEX07_02(a,b);
+		System.out.println("EX07_01 => a : " + a);
+		System.out.println("EX07_01 => b : " + b);
+	}
+	public void MethodTestEX07_02(int a, int b) {
+		a += 100; b += 200;
+		System.out.println("EX07_02 => a : " + a);
+		System.out.println("EX07_02 => b : " + b);
+	}
+}
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 1. localVal 객체 생성
+		MethodLocalVariable localVal = new MethodLocalVariable();
+		
+		// 2. MethodTest_EX01_01()호출
+		localVal.MethodTestEX07_01();
+		
+		// 3. 결화 확인
+	}
+
+}
+
+**********************************************************************
+
+** 객체지향 프로그램
+*객체(Object)
+-현실 세계의 개념, 사물 또는 엔티티를 프로그램에서 표현한 것으로 객체는 속성(데이터)과 메서드(동작)를 가짐
+객체(object) = 속성(attribute) + 동작(function)
+               = 필드(field) +메서드(method)
+
+* 절차 지향 프로그래밍(procedural programming)
+-프로그램을 수행해야 하는 단계로 나누고, 각 단계에서 어떤 작업을 수행할지 명시하는 방식
+
+* 객체 지향 프로그래밍(object-Oriented Programming, OOP)
+-현실 세계의 객체(object)를 모델링하고, 그 객체들 간의 상호 작용을 통해 프로그램을 구성하는 방식
+
+* 클래스(class)
+- 객체의 설계도 또는 틀을 나타냅니다. 클래스는 객체를 생성하기 위한 템플릿 역할을 하며, 객체를 생성하기 위한
+속성과 메서드를 정의합니다.
+
+class 클래스명{
+	필드
+	생성자
+	메서드
+}
+클래스명 객체명 = new 생성자();
+
+* 필드(field)
+- 필드는 객체 내부에 존재하며, 객체의 상태 데이터를 저장하는 공간으로 객체의 필드에 접근 할때에는
+도트(".")연산자를 사용(객체의 변수라고 생각하면됨)
+
+
+class 클래스명{
+	타입 필드명 = 값;
+}
+
+* 메서드(method)
+- 메서드는 특정 기능을 하는 코드의 집합으로 다른 언어에서는 함수를 의미하며, 객체의 메서드에
+접근 할 때에는 도트(".")연산자를 사용, 마지막에 (); 닫아줘야됨
+- 메서드는 긴코드를 출력할때
+
+
+class 클래스명 {
+	리턴자료형 메서드명(매개 변수, ..) {
+		···
+	return 리턴값;
+	}
+}
+
+// 중요(외워야됨)
+파일명.java 소스 파일은 public class파일은 무조건 1개만 담을수가 있다.
+파일명.java 이랑 public class 파일명의 파일명은 무조건 동일해야됨. 안그러면 에러가남
+
+-----------------------------------------------------------------------------------------------------------------------
+20240625(화)
+
+**********************************************************************
+package Chapter7;
+
+class Person {
+	String name = "송일국";
+	int age = 52;
+	boolean isMarried = true;
+	int numberOfChildren = 3;
+}
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person person = new Person();
+		
+		System.out.println("이름: " + person.name);
+		System.out.println("나이: " + person.age);
+		System.out.println("결혼 여부: " + person.isMarried);
+		System.out.println("자녀 수: " + person.numberOfChildren);
+	}
+
+}
+**********************************************************************
+package Chapter7;
+
+class Student {
+	public void studentAvrScore(String name, int kor, int eng, int math) {
+		int avr = (kor + eng + math)/3;
+		System.out.println(name + "의 성적 평균은 " + avr + "입니다.");
+	}
+}
+
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student student = new Student();
+		
+		student.studentAvrScore("장원영", 100, 100, 100);
+		student.studentAvrScore("안유진", 90, 90, 90);
+		student.studentAvrScore("가을", 80, 80, 80);
+	}
+
+}
+**********************************************************************
+package Chapter7;
+
+class StudentReturn {
+	public String studentAvrScore(String name, int kor, int eng, int math) {
+		int avr = (kor + eng + math)/3;
+		return name + "의 성적 평균은 " + avr + "입니다.";
+	}
+}
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentReturn student = new StudentReturn();
+		
+		String student1 = student.studentAvrScore("장원영", 100, 100, 100);
+		String student2 = student.studentAvrScore("안유진", 90, 90, 90);
+		String student3 = student.studentAvrScore("가을", 80, 80, 80);
+		
+		System.out.println(student1);
+		System.out.println(student2);
+		System.out.println(student3);
+	}
+
+}
+**********************************************************************
+package Chapter7;
+
+import java.util.Scanner;
+
+class Absolute {
+	public int absoluteCheck(int num) {
+		if (num < 0)
+			return -num;
+		else
+			return num;
+	}
+	public void outPut(int num, int result) {
+		System.out.println("입력값: " + num);
+		System.out.println("절대값: " + result);
+	}
+}
+
+public class Quiz4 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		Absolute ab = new Absolute();
+		System.out.print("정수 입력: ");
+		int num = input.nextInt();
+		int result = ab.absoluteCheck(num);
+		ab.outPut(num, result);
+		input.close();
+	}
+}
+**********************************************************************
+package Chapter7;
+
+import java.util.Scanner;
+
+class ReseverClass{
+	public int reverse(int num) {
+		int tem=0, result=0;
+		while(true) {
+			tem = num % 10;
+			num = num /10;
+			result = (result + tem) * 10;
+			if(num == 0) 
+				return result / 10;
+		}
+	}
+	public int inData(){
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num = input.nextInt();
+		input.close();
+		return num;
+	}
+	public void outData(){
+		int num = inData();
+		int result = reverse(num);
+		System.out.println("변환 전 Data: " + num);
+		System.out.println("변환 후 Data: " + result);
+	}
+}
+public class Quiz5 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ReseverClass revCode = new ReseverClass();
+		revCode.outData();
+	}
+}
+**********************************************************************
+
+** 패키지 (package)
+- 자바의 디렉터리로 관련된 클래스를 묶어놓아 그룹화하고 코드의 유지보수성을 향상
+package  패키지명
+import 패키지명
+
+** 접근 제한자(access modifier)
+클래스, 메서드, 필드 등의 멤버에 대한 접근 권한을 설정하는데 사용됨
+1. public - 동일 패키지 클래스 내부, 외부에서 모두 접근이 가능한
+ 접근 제한자 다른패키지의 클래스 또한 접근이 가능
+2. private - 클래스 내부에서만 접근이 가능하며, 다른 클래스에서는 접근이 불가능
+다른 패키지의 클래스 또한 접근이 불가능
+3. protected - 동일 패키지에서는 접근이 가능하며, 다른 패키지에서는 접근이 불가능
+상속 된 자식 클래스에서는 어디에서든 접근이 가능
+4. Default - 접근 제한자에 대한 명시가 없을 경우 Default 접근 제한자가 설정 됨
+동일 패키지에서는 접근이 가능하며, 다른 패키기에서는 접근이 불가능
+
+------------------------------------------------------------------------------------------------------------------------
+20240626(수)
+
+**********************************************************************
+package Chapter8;
+
+class AccessModifier1 {
+	public String MethodTest_EX01(int x, int y) {
+		if(x > y) {
+			return x + "이 " + y + "보다 크다.";
+		}else if(x < y) {
+			return y + "이 " + x + "보다 크다.";
+		}else {
+			return x + "와 " + y + "는 같다.";
+		}
+	}
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccessModifier1 am = new AccessModifier1();
+		
+		String str = am.MethodTest_EX01(100, 200);
+		
+		System.out.println("결과: " + str);
+	}
+
+}
+
+**********************************************************************
+package Chapter8;
+
+class AccessModifier2 {
+	// private - 오로지 동일 class 내에서만 접근 가능 -> 그래서 아래의 다른 클래스에서는 사용 못하니깐 에러가 남. 
+	// -> 해결 방법은 EX03 파일 확인
+	//private String MethodTest_EX02(int x, int y) {
+	String MethodTest_EX02(int x, int y) { //Default 접근 제한자
+		if(x > y) {
+			return x + "이 " + y + "보다 크다.";
+		}else if(x < y) {
+			return y + "이 " + x + "보다 크다.";
+		}else {
+			return x + "와 " + y + "는 같다.";
+		}
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccessModifier2 am = new AccessModifier2();
+		String str = am.MethodTest_EX02(100, 200);
+		System.out.println("결과: " + str);
+	}
+
+}
+
+**********************************************************************
+package Chapter8;
+
+class AccessModifier3 {
+	// private - 오로지 동일 class 내에서만 접근 가능 -> 그래서 아래의 다른 클래스에서는 사용 못하니깐 에러가 남.
+	// -> 해결방법 -> 아래에 public 메서드를 만들어서 리턴 해줌.(반드시 public 으로 만들어야됨)
+	private String MethodTest_EX03(int x, int y) {
+		if(x > y) {
+			return x + "이 " + y + "보다 크다.";
+		}else if(x < y) {
+			return y + "이 " + x + "보다 크다.";
+		}else {
+			return x + "와 " + y + "는 같다.";
+		}
+	}
+	public String subMethodTest_EX03(int x, int y) {
+		String str = MethodTest_EX03(100, 200);
+		return str;
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccessModifier3 am = new AccessModifier3();
+		String str = am.subMethodTest_EX03(100, 200);
+		System.out.println("결과: " + str);
+	}
+
+}
+
+**********************************************************************
+package Chapter8;
+
+public class EX04 {
+	public String MethodTest_EX04(String name) {
+		return "이름: " + name + " 입니다.";
+	}
+	
+	// 선생님 풀이
+	public void p_name() {
+		System.out.println("이름: \"박지은\"");
+	}
+}
+
+**********************************************************************
+package Chapter8;
+
+public class EX05 {
+	public String MethodTest_EX05(int age) {
+		return "나이: " + age + "살 입니다.";
+	}
+	
+	// 선생님 풀이
+	public void p_age() {
+		System.out.println("나이: \"20살\"");
+	}
+}
+
+**********************************************************************
+package Chapter8;
+
+public class EX06 {
+	public String MethodTest_EX06(String address) {
+		return "주소: " + address + " 입니다.";
+	}
+	
+	// 선생님 풀이
+	public void p_address() {
+		System.out.println("주소: \"남극\"");
+	}
+}
+
+**********************************************************************
+package Chapter8;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		EX04 name = new EX04();
+		EX05 age = new EX05();
+		EX06 address = new EX06();
+		
+		System.out.println(name.MethodTest_EX04("박지은"));
+		System.out.println(age.MethodTest_EX05(34));
+		System.out.println(address.MethodTest_EX06("서울시 성동구 응봉동"));
+		
+		System.out.println();
+		
+		// 선생님 풀이
+		name.p_name();
+		age.p_age();
+		address.p_address();
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+public class EX01 {
+
+	static int classVariable = 100; // 클래스 변수
+	int instanceVariable = 200; // 인스턴스 변수
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int localVariable = 300; // 지역 변수
+		
+		System.out.println("클래스 변수: " + classVariable);
+//		System.out.println("인스턴스 변수: " + instanceVariable); // 에러나는경우 -> 객체를 생성해야됨, 해결방법 -> EX02
+		System.out.println("지역 변수: " + localVariable);
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+public class EX02 {
+
+	static int classVariable = 100; // 클래스 변수
+	int instanceVariable = 200; // 인스턴스 변수
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int localVariable = 300; // 지역 변수
+		
+		EX02 lv = new EX02();
+		System.out.println("클래스 변수: " + classVariable); // 객체 생성안해도 사용가능
+		System.out.println("인스턴스 변수: " + lv.instanceVariable); // 객체를 생성해야지만 사용할수 있음
+		System.out.println("지역 변수: " + localVariable); // 지역변수도 그 안에서 사용하기때문에 사용가능
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+class Varaible1 {
+	public void veriable() {
+		int var = 100; //블록 안에서만 사용가능 - 지역 변수 (다른 영역에서는 사용 안됨) -> 해결 방안 EX04 확인
+		System.out.println("var: " + var);
+	}
+	public void func() {
+//		System.out.println("var: " + var); // 에러남
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible1 va = new Varaible1();
+		va.veriable();
+		va.func();
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+class Varaible2 {
+	int var = 100; // 인스턴스 변수로 바꿔서 사용하면됨 
+	public void veriable() {
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible2 va = new Varaible2();
+		va.veriable();
+		va.func();
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+class Varaible4 {
+	int var = 100; // 인스턴스 변수로 바꿔서 사용하면됨 
+	public void veriable() {
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible4.var = 300; // 인스턴스 변수는 객체 생성전에 쓰면 에러남 -> 해결 EX06확인
+		Varaible4 va = new Varaible4();
+		va.veriable();
+		va.func();
+
+	}
+
+}
+**********************************************************************
+package Chapter9;
+
+class Varaible3 {
+	static int var = 100; // 클래스변수
+	public void veriable() {
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible3.var = 300; // 인스턴스 변수는 객체 생성전에 쓰면 에러남 그래서 위에 class 에 int var 변수에 static 넣어서 씀.(클래스 변수로 변경)
+		Varaible3 va = new Varaible3();
+		va.veriable();
+		va.func();
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+import java.util.Scanner;
+
+//비공개형
+class SetGet_01 {
+	
+	private String name;
+	
+	private void setName() {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("이름: ");
+		this.name = input.next();
+		
+		input.close();
+	}
+	
+	private String getName() {
+		return this.name;
+	}
+	
+	public void nameSetGet() {
+		setName();
+		System.out.println("이름 출력: " + getName());
+	}
+}
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SetGet_01 sg = new SetGet_01();
+		
+		sg.nameSetGet();
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+import java.util.Scanner;
+
+// 읽기전용
+class SetGet_02 {
+	
+	private String name;
+	
+	private void setName() {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("이름: ");
+		this.name = input.next();
+		
+		input.close();
+	}
+	
+	public String getName() { //getName에 private 을 public 변경하면 읽기전용으로 됨
+		return this.name;
+	}
+	
+	public void nameSetGet() {
+		setName();
+		System.out.println("이름 출력: " + getName());
+	}
+}
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SetGet_02 sg = new SetGet_02();
+		sg.nameSetGet();
+		
+		System.out.println("읽기 전용: " + sg.getName());
+
+	}
+
+}
+
+**********************************************************************
+package Chapter9;
+
+import java.util.Scanner;
+
+// 공개 전용
+class SetGet_03 {
+	
+	private String name;
+	
+	public void setName() { //getName에 private 을 public 변경
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("이름: ");
+		this.name = input.next();
+		
+		input.close();
+	}
+	
+	public String getName() { //getName에 private 을 public 변경
+		return this.name;
+	}
+	
+}
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SetGet_03 sg = new SetGet_03();
+		sg.setName();
+		System.out.println("공개형: " + sg.getName());
+
+	}
+
+}
+
+
+
+**********************************************************************
+package Chapter10;
+
+class Computer1 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer1() {} //기본 생성자 추가( 써도 되고 안써도 됨 )
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 객체 생성 ( new 뒤에 있는게 생성자! 생성자는 class name 과 동일) 객체를 초기화!
+		Computer1 com = new Computer1();
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Computer2 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer2(String setCPU) {
+		CPU = setCPU;
+		
+		// 생성자는 초기화만 가능 (메서드랑 비슷하지만 생성자는 반환값이 존재하지 않음)
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 객체 생성 -> 에러남 해결 EX03 확인 
+		Computer2 com = new Computer2();
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Computer3 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer3(String setCPU) {
+		CPU = setCPU;
+	}
+	
+	Computer3() {}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer3 com = new Computer3();
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+	}
+
+}
+**********************************************************************
+
+**
+접근 제어자 정리
+- 클래스, 메서드, 필드 등의 멤버에 대한 접근 권한을 설정하는데 사용됨
+
+아래의 순서대로
+- public - 어디에서든 접근 가능
+- protected - 같은 패키지, 상속 관계만 접근 가능
+- Default - 같은 패키지에서만 접근 가능
+- private - 해당 클래스에서만 접근 가능
+
+* Instance Member & Static Member
+-Field와 Method는 Instance Member 와 Static Member로 구분됨
+
+- Instance Member
+객체가 생성되어야지만, 사용할 수 있는 field, method를 의미
+EX) 하나의 클래스로 여러개의 객체를 생성 시 각 객체마다 서로 다른 값을 설정하는경우
+
+- Static Member
+객체가 생성되지 않아도, 사용할 수 있는 field, method를 의미한다.
+EX) 하나의 클래스로 여러 개의 객체를 생성 후 모든 객체에서 공통된값을 설정해야하는 경우
+
+*정보 은닉
+- 클래스의 필드변수의 접근 제한을 통해 클래스의 정보를 숨기는 행위를 의미
+1. 모든 멤버변수가 외부에 공개되어있을 경우 누구나 클래스의 멤버변수 값을 임의로 
+조작할 수 있는 상태가 만들어질 수 있음
+2. 클래스의 정보은닉을 구현하기 위해서는 멤버 변수의 접근제한자 private을 설정을
+통해 외부에서의 접근제한을 명시
+3. 접근제한이 설정 된 멤버 변수의 값은 객체내부의 검사 및 검증 작업을 진행 한 후
+멤버변수의 값을 변경할 수 있도록 구현 위와 같은 형태로 클래스의 내부구조를 구성하는것을
+클래스의 정보은닉이라 표현
+
+* 캡슐화
+- 하나의 온전한 기능을 수행 할 수 있는 클래스를 정의한 것을 의미
+1. 객체 지향 프로그래밍(OOP)에서 사용되는 중요한 개념 중 하나로, 관련된 데이터와
+기능을 하나의 단위로 묶고, 외부에서의 접근을 제한하는 것을 의미 하며, 메서드를 사용하여
+데이터에 접근하도록 제어함으로써, 데이터에 대한 부적절한 직접적인 접근을 막음
+
+* Getter & Setter
+- 접근제한이 설정 된 필드변수의 접근하기 위한 메서드
+Getter Method: 필드변수의 값을 사용 할 때 사용
+Setter Method:  필드변수의 값을 설정 할 때 사용
+
+Getter, Setter는 프로그래머들간 약속 된 이름구조 ( 다른 이름 사용가능)
+Getter Method 이름 지정 기본 형식: get + Field name(getName)
+Setter Method 이름 지정 기본 형식:  set + Field name(setName)
+
+** 생성자
+- 객체 생성 시 해당 객체의 초기화 작업을 담당
+
+필드 초기화, 메서드 호출 등의 작업을 수행하며, 모든 클래스에는 반드시 하나 이상의
+생성자가 존재해야함.
+* Constructor 특징
+- 생성자의 이름은 반드시 클래스 이름과 동일해야함
+- 클래스의 명시 된 접근 제한자를 동일하게 물려받아 적용됨
+- 생성자를 명시하지 않을 경우 기본 생성자가 자동 추가됨
+- 생성자는 Method와 비슷한 형식을 사용하지만, 반환 값이 없음
+- 생성자를 명시적으로 선언 한 경우 기본 생성자는 자동 추가되지 않음
+
+------------------------------------------------------------------------------------------------------------------------
+20240627(목)
+
+**********************************************************************
+package Chapter10;
+
+class Computer4 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer4(String CPU) {
+		CPU = CPU; // 매개변수랑 , 필드의 이름을 동일하게 하면 매개변수가 필드보다 우선이여서 CPU가 매개변수라고 인식함... 해결방법은 EX05확인
+	}
+	
+	Computer4() {}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer4 com = new Computer4("AMD");
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+	}
+
+}
+**********************************************************************
+package Chapter10;
+
+class Computer5 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer5(String CPU) {
+		this.CPU = CPU;
+	}
+	
+	Computer5() {}
+}
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 정리 -> 생성자를 사용하는 이유는 객체마다 다른 속성을 가질수있어서
+		// 예) 붕어빵에서 팥이 들어가있는 붕어빵을 만들면 기존에는 클래스에서 팥만 무한대로 만들수 있는데 
+		// 생성자를 만들면 팥, 슈크림, 피자등의 맛이 다양하게 만들수 있음.
+		
+		Computer5 com1 = new Computer5();
+		System.out.println("CPU: " + com1.CPU);
+		System.out.println("RAM: " + com1.RAM);
+		System.out.println("SSD: " + com1.SSD);
+		
+		System.out.println();
+		
+		Computer5 com2 = new Computer5("AMD");
+		System.out.println("CPU: " + com2.CPU);
+		System.out.println("RAM: " + com2.RAM);
+		System.out.println("SSD: " + com2.SSD);
+		
+		System.out.println();
+		
+		Computer5 com3 = new Computer5("Samsung");
+		System.out.println("CPU: " + com3.CPU);
+		System.out.println("RAM: " + com3.RAM);
+		System.out.println("SSD: " + com3.SSD);
+	
+	}
+
+}
+**********************************************************************
+package Chapter10;
+
+class Computer6 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+
+	Computer6() {}
+	
+	Computer6(String CPU) {
+		this.CPU = CPU;
+	}
+	
+	Computer6(String CPU, String RAM) {
+		this.CPU = CPU;
+		this.RAM = RAM;
+	}
+
+}
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer6 com1 = new Computer6();
+		Computer6 com2 = new Computer6("AMD");
+		Computer6 com3 = new Computer6("AMD", "SK");
+		
+	}
+
+}
+**********************************************************************
+package Chapter10;
+
+class Computer7 {
+	String CPU;
+	String RAM;
+	String SSD;
+	
+	Computer7() {
+		this.CPU = "Intel";
+		this.RAM = "Samsung";
+		this.SSD = "Samsung";
+	}
+	
+	Computer7(String CPU) {
+		this.CPU = CPU;
+		this.RAM = "Samsung";
+		this.SSD = "Samsung";
+	}
+	
+	Computer7(String CPU, String RAM) {
+		this.CPU = CPU;
+		this.RAM = RAM;
+		this.SSD = "Samsung";
+	}
+	
+	Computer7(String CPU, String RAM, String SSD) {
+		this.CPU = CPU;
+		this.RAM = RAM;
+		this.SSD = SSD;
+	}
+}
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer7 com1 = new Computer7();
+		Computer7 com2 = new Computer7("AMD");
+		Computer7 com3 = new Computer7("AMD", "SK");
+		
+		System.out.println("Com1 CPU: " + com1.CPU);
+		System.out.println("Com1 RAM: " + com1.RAM);
+		System.out.println("Com1 SSD: " + com1.SSD);
+		
+		System.out.println();
+		
+		System.out.println("Com2 CPU: " + com2.CPU);
+		System.out.println("Com2 RAM: " + com2.RAM);
+		System.out.println("Com2 SSD: " + com2.SSD);
+		
+		System.out.println();
+		
+		System.out.println("Com3 CPU: " + com3.CPU);
+		System.out.println("Com3 RAM: " + com3.RAM);
+		System.out.println("Com3 SSD: " + com3.SSD);
+
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Computer8 {
+	String CPU;
+	String RAM;
+	String SSD;
+	
+	// 나머지 생성자는 반드시 첫줄에서만 사용한다! this 는 생성자를 다른 호출하는거다.
+	Computer8() {
+		this("Intel", "Samsung", "Samsung");
+	}
+	
+	Computer8(String CPU) {
+		this(CPU, "Samsung", "Samsung");
+	}
+	
+	Computer8(String CPU, String RAM) {
+		this(CPU, RAM, "Samsung");
+	}
+	
+	// 중요!! 무조건 초기화 할 생성자가 있어야됨(한 생성자에 집중적으로 작정!)
+	Computer8(String CPU, String RAM, String SSD) {
+		this.CPU = CPU;
+		this.RAM = RAM;
+		this.SSD = SSD;
+	}
+}
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer8 com1 = new Computer8();
+		Computer8 com2 = new Computer8("AMD");
+		Computer8 com3 = new Computer8("AMD", "SK");
+		
+		System.out.println("Com1 CPU: " + com1.CPU);
+		System.out.println("Com1 RAM: " + com1.RAM);
+		System.out.println("Com1 SSD: " + com1.SSD);
+		
+		System.out.println();
+		
+		System.out.println("Com2 CPU: " + com2.CPU);
+		System.out.println("Com2 RAM: " + com2.RAM);
+		System.out.println("Com2 SSD: " + com2.SSD);
+		
+		System.out.println();
+		
+		System.out.println("Com3 CPU: " + com3.CPU);
+		System.out.println("Com3 RAM: " + com3.RAM);
+		System.out.println("Com3 SSD: " + com3.SSD);
+
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Student1 {
+	String name = "박지은";
+	int age = 34;
+	String major = "major";
+	
+}
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student1 student = new Student1();
+		
+		System.out.println("이름은: " + student.name);
+		System.out.println("나이는: " + student.age);
+		System.out.println("major는: " + student.major);
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Student2 {
+	String name;
+	int age;
+	String major;
+	
+	public void printStudent (String name, int age, String major) {
+		System.out.println("학생 이름은 " + name);
+		System.out.println("학생 나이는 " + age);
+		System.out.println("학생 major은 " + major);
+	}
+}
+
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student2 student = new Student2();
+		student.printStudent("박지은", 34, "major");
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Student3 {
+	String name;
+	int age;
+	String major;
+	
+	public String startStudying (String name, int age, String major) {
+		return major + "학과 학과 " + name + "님이 공부를 시작합니다." ;
+	}
+}
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student3 student = new Student3();
+		
+		System.out.println(student.startStudying("펭수", 34, "펭귄"));
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+import java.util.Scanner;
+
+class QuizClass3 {
+	
+	private int num;
+	
+	private void inputValue() {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("수 입력: ");
+		this.num = input.nextInt();
+		
+		input.close();	
+	}
+
+	public void outValu() {
+		inputValue();
+		
+		if(this.num % 2 == 0) {
+			System.out.println("결과: " + this.num + "은 짝수");
+		} else {
+			System.out.println("결과: " + this.num + "은 홀수");
+		}
+	}
+}
+
+
+
+public class Quiz4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		QuizClass3 quiz = new QuizClass3();
+
+		quiz.outValu();
+		
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+class Car {
+	String brand;
+	String model;
+	int year;
+	
+	Car(String brand, String model){
+		this(brand, model, 2024);
+	}
+	
+	Car(String brand, String model, int year){
+		this.brand = brand;
+		this.model = model;
+		this.year = year;
+	}
+}
+
+public class Quiz5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Car car1 = new Car("Benz", "E350d");
+		Car car2 = new Car("Bmw", "ix");
+		Car car3 = new Car("Genesis", "G80");
+
+		System.out.println("brand: " + car1.brand);
+		System.out.println("model: " + car1.model);
+		System.out.println("year: " + car1.year);
+		System.out.println("brand: " + car2.brand);
+		System.out.println("model: " + car2.model);
+		System.out.println("year: " + car2.year);
+		System.out.println("brand: " + car3.brand);
+		System.out.println("model: " + car3.model);
+		System.out.println("year: " + car3.year);
+		
+	}
+
+}
+
+**********************************************************************
+package Chapter10;
+
+import java.util.Scanner;
+
+
+public class Quiz6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+**********************************************************************
+package Chapter10;
+
+import java.util.Scanner;
+
+class UpDownGame {
+	
+	public void random() {
+		
+	}
+
+	public void gameStart() {
+		Scanner input = new Scanner(System.in);
+		
+		int answer = 50;
+		int num;
+		System.out.println("=== Game Start ===");
+		
+		while (true) {
+			System.out.print("정답 입력: ");
+			num = input.nextInt();
+			
+			if (answer > num) {
+				System.out.println("Up!");
+				continue;
+			} else if (answer < num ) {
+				System.out.println("Down!");
+				continue;
+			} else {
+				System.out.println("GOOD!");
+				System.out.println("< 정답을 입력하셨습니다. >");
+				System.out.println("< 정답 입력 횟수: " + "회 입니다.>");
+				break;
+			}
+			
+		}
+		
+		input.close();
+		
+	}
+	
+	public void game(int num) {
+		if (num == 1) {
+			gameStart();
+		} else if(num == 2){
+			
+		} else if(num == 3) {
+			System.out.println("게임을 종료합니다.");
+		
+		}
+	}
+}
+
+
+public class Quiz7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		UpDownGame game = new UpDownGame();
+		
+		System.out.println("====== UP & DOWN GAME ======");
+		System.out.println("1. 게임 시작");
+		System.out.println("2. 기록 확인");
+		System.out.println("3. 게임 종료");
+		System.out.print("번호를 선택하세요: ");
+		int num = input.nextInt();
+		
+		game.game(num);
+		
+		input.close();
+	
+	}
+
+}
+
+
+**********************************************************************
+
+** 생성사 this
+- 객체의 필드변수와 매개변수를 구분하기 위해서는 this를 사용
+
+코드의 가독성을 높이기 위해 매개변수는 필드의 이름과 동일하게 설정하는 것이 좋음
+- 매개변수는 지역변수이며, 지역변수는 필드 변수보다 우선순위가 높아 접근이 불가능
+- 객체의 필드변수와 매개변수를 구분하기 위해서는 this를 사용
+- this는 현재 생성 된 객체 자기자신을 의미하며, 객체 자신이 갖는 필드로 접근이 가능
+- 객체의 필드로 접근하기 위해서는 도트(".")연산자를 사용, this 또한 동일
+
+* 생성자 오버로딩
+- 같은 Class 내의 동일한 이름의 생성자를 여러 개 선언 하는것을 의미
+
+생성자 오버로딩의 조건은 매개변수의 개수를 다르게 구성해야함
+- 외부에서 제공되는 다양한 데이터에 따른 객체 초기화를 위해 사용
+- 생성자 오버로딩시 this를 활용하여 중복 코드를 최소화 시킬 수 있음
+- 생성자 오버로딩은 매개변수의 타입, 순서는 조건에 포함되지 않음 
+
+
+------------------------------------------------------------------------------------------------------------------------
+20240701(월)
+
+**********************************************************************
+package Chapter11;
+
+//상속
+
+// 계산기 기능 class
+class MyCalc {
+	public void calcMethod(int num1, int num2) {
+		int sum = num1 + num2;
+		System.out.println("합: " + sum);
+	}
+}
+
+// 상속 받아야됨 -> 부모 클래스 작성 extends 부모 클래스명 -> (extends Mycalc 추가) 
+class Computer extends MyCalc {
+	public void phoneMethod(int num1, int num2) {
+		System.out.println("컴퓨터 계산기 실행");
+		calcMethod(num1, num2);
+	}
+}
+
+//상속 받아야됨 -> 부모 클래스 작성 extends 부모 클래스명 -> (extends Mycalc 추가) 
+class HandPhone extends MyCalc {
+	public void phoneMethod(int num1, int num2) {
+		System.out.println("핸드폰 계산기 실행");
+		calcMethod(num1, num2);
+	}
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer com = new Computer();
+		com.calcMethod(100, 200);
+		
+		HandPhone phone = new HandPhone();
+		phone.calcMethod(200, 300);
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+class Ferrari1 {
+	private int year;
+	
+	//생성자 만듬
+	public Ferrari1(int year) {
+		this.year = year;
+	}
+	// 데이터 반환 메서드
+	public int getYear() {
+		return year;
+	}
+	//메서드 호출
+	public void speed() {
+		System.out.println(getYear() + "년 씩 페라리 최대 속도: 300km");
+	}
+}
+
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ferrari1 myCar = new Ferrari1(2023);
+		myCar.speed();
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+// 오버라이딩
+
+class Ferrari2 {
+	// 상속 전용으로 쓰이는 접근 제한자! protected
+	protected int year;
+	
+	//생성자 만듬
+	public Ferrari2(int year) {
+		this.year = year;
+	}
+	// 데이터 반환 메서드
+	public int getYear() {
+		return year;
+	}
+	//메서드 호출
+	public void speed() {
+		System.out.println(getYear() + "년 씩 페라리 최대 속도: 300km");
+	}
+}
+
+// 기존 Ferrari2 상속!
+class NewFerrari extends Ferrari2 {
+	
+	//생성자에서는 -> 년도를 인자로 받은 super()라는 키워드 사용 -> 부모클래스에 접근할때 접근하는거 (예 -> super(year))
+	public NewFerrari(int year) {
+		super(year);
+	}
+	
+	@Override // 개발자들이 Override 한지 몰라서 언어테이션(주석처리) 설정 부모클래스랑 자식클래스랑 메서드 이름이 같을경우( speed 재설정 했기때문에)
+	public void speed() {
+		// 부모 클래스에 접근할때 super. 라는 키워드 사용! (예 -> super.year)
+		if(super.year == 2024) {
+			System.out.println(getYear() + "년 씩 페라리 최대 속도: 400km");
+		} else {
+			super.speed();
+		}
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 객체1(2023)
+		NewFerrari myNewCar1 = new NewFerrari(2023);
+		
+		// 객체2(2024)
+		NewFerrari myNewCar2 = new NewFerrari(2024);
+		
+		//speed() 호출
+		myNewCar1.speed();
+		myNewCar2.speed();
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+// 정보처리기사 시험에 많이 나온문제
+
+import java.util.Scanner;
+
+// 오버라이딩
+// 에러 확인 EX04_1 확인
+// **상속되지 말아야 되는 class 는 final 을 class 앞에 써주면 상속 될수가 없다!
+final class A {
+	protected String str;
+	public A(String str) {
+		this.str = str;
+	}
+	
+	// **상속되지 말아야 되는 Method 는 final 을 중간에 넣어주면 됨!
+	public final void Method1() {
+		System.out.println("Parents Class!");
+	}
+}
+
+class B extends A {
+	public B(String str) {
+		super(str);
+	}
+	
+	@Override
+	public void Method1() {
+		if(super.str.equals("Parents")) {
+			super.Method1();
+		}else {
+			System.out.println("Child Class!");
+		}
+	}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("Parents or Child input: ");
+		String str = input.next();
+		B test = new B(str);
+		test.Method1();
+		input.close();
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+// 정보처리기사 시험에 많이 나온문제
+
+import java.util.Scanner;
+
+// 오버라이딩
+
+// **상속되지 말아야 되는 class 는 final 을 class 앞에 써주면 상속 될수가 없다!
+class A1 {
+	protected String str;
+	public A1(String str) {
+		this.str = str;
+	}
+	
+	// **상속되지 말아야 되는 Method 는 final 을 중간에 넣어주면 됨!
+	public void Method1() {
+		System.out.println("Parents Class!");
+	}
+}
+
+class B1 extends A1 {
+	public B1(String str) {
+		super(str);
+	}
+	
+	@Override
+	public void Method1() {
+		if(super.str.equals("Parents")) {
+			super.Method1();
+		}else {
+			System.out.println("Child Class!");
+		}
+	}
+}
+
+public class EX04_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("Parents or Child input: ");
+		String str = input.next();
+		B1 test = new B1(str);
+		test.Method1();
+		input.close();
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+import java.util.Scanner;
+
+//추상 클래스, 추상 메서드
+abstract class Machine {
+	Scanner input = new Scanner(System.in);
+	protected String Owner;
+	protected String Serial;
+	protected Machine(String Owner, String Serial) {
+		this.Owner = Owner;
+		this.Serial = Serial;
+	}
+	
+	// 추상 메서드는 무조건 사용해야됨! 안그러면 에러남
+	public abstract void turnOn();
+	public abstract void machineInfo();
+	
+}
+
+class Monitor extends Machine {
+	public Monitor(String Owner, String Serial) {
+		super(Owner, Serial);
+	}
+	
+	@Override
+	public void turnOn() {
+		System.out.println("모니터 전원 On");
+	}
+	
+	@Override
+	public void machineInfo() {
+		System.out.println("관리자: " + this.Owner);
+		System.out.println("관리번호: " + this.Serial);
+		System.out.print("전원을 키시겠습니까(y/n)?");
+		char flag = input.next().charAt(0);
+		
+		if(flag == 'y' || flag == 'Y') {
+			turnOn();
+		}
+	}
+}
+
+class Com extends Machine {
+	public Com(String Owner, String Serial) {
+		super(Owner, Serial);
+	}
+	
+	@Override
+	public void turnOn() {
+		System.out.println("컴퓨터 전원 On");
+	}
+	
+	@Override
+	public void machineInfo() {
+		System.out.println("관리자: " + this.Owner);
+		System.out.println("관리번호: " + this.Serial);
+		System.out.print("전원을 키시겠습니까(y/n)?");
+		char flag = input.next().charAt(0);
+		
+		if(flag == 'y' || flag == 'Y') {
+			turnOn();
+		}
+	}
+}
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Monitor mo = new Monitor("Admin_1", "1-100");
+		mo.machineInfo();
+		
+		System.out.println();
+		
+		Com com = new Com("Admin_2", "2-200");
+		com.machineInfo();
+		
+
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+// Up-Casting - 자식클래스 타입을 부모클래스 타입으로 반환 (자동타입 변환)
+
+
+class Upcasting_p {
+	public String name;
+	Upcasting_p(String name) {
+		this.name = name;
+	}
+	public void getClassName() {
+		System.out.println(name);
+		System.out.println("Upcasting_p Test");
+	}
+}
+
+class Upcasting_C1 extends Upcasting_p {
+	Upcasting_C1(String name) {
+		super(name);
+	}
+	
+	@Override
+	public void getClassName() {
+		System.out.println(name);
+		System.out.println("Upcasting_C1 Test");
+	}
+}
+
+class Upcasting_C2 extends Upcasting_p {
+	Upcasting_C2(String name) {
+		super(name);
+	}
+	
+	@Override
+	// 오버라이딩을 하면 자식 클래스 에 접근 가능
+	public void getClassName() {
+		System.out.println(name);
+		System.out.println("Upcasting_C2 Test");
+	}
+	public void Child_No2() {
+		System.out.println("Child_No2_Method!");
+	}
+}
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Upcasting_p upcasting = new Upcasting_p("Parents");
+		upcasting.getClassName();
+		
+		upcasting = new Upcasting_C1("Child_No1"); // up-casting ( 부모클래스에 자식 클래스 객체 생성)
+		upcasting.getClassName(); //그러므로 자식클래스의 Override 를 해서 자식클래스에 메서드를 접근가능하게 만듬! 
+		
+		upcasting = new Upcasting_C2("Child_No2"); // up-casting
+		upcasting.getClassName();
+//		upcasting.Child_No2(); // up-casting는 부모클래스에 메서드만 접근이 가능하기때문에 자식 메서드에 있는 Child_No2는 접근이 불가능!
+	}
+
+}
+**********************************************************************
+
+** 고급문법
+
+* 상속(Inheritance) 중요!!
+- 상속이란, 이미 잘 만들어진 클래스를 재 사용하여, 새로운 클래스를 정의하는것을 의미
+- 상속을 해주는 클래스를 "부모 클래스" 상속을 받는 클래스를 "자식 클래스"
+- 상속 작업은 자식 클래스가 상속을 받을 부모 클래스를 선택하여 상속을 진행
+(extends 키워드 사용 / 자바는 다중 상속 "x")
+- 부모 클래스의 멤버요소를 자식 클래스에서도 동일하게 사용가능하며, 
+상속 받은 멤버 요소들을 재정의하거나 추가하여 사용가능
+ 
+* 오버라이딩(Method Overriding)
+Method Overriding은 자식클래스에서 부모 클래스의 메서드를 재정의 하는것
+-부모 클래스의 Method를 자신의 상태에 맞게 변경하여 사용이 가능
+Overriding 된 Method 호출시 자식 클래스에서 Overriding 된 Method가 호출됨
+
+Method Overriding 조건
+- Method 이름이 동일해야함
+- Method의 매개변수 목록이 동일해야함
+- Method 리턴 타입이 동일해야함.
+
+* 추상 클래스, 메서드(Abstract Class & Method)
+- 공통 된 필드와 메서드 이름을 갖는 실체 클래스를 구현하기 위해 사용
+추상클래스란 객체를 직접 생성할수 없고 ( new 사용불가), 
+상속만 가능한 클래스를 의미 (extends 뒤에만 명시 가능)
+추상 메서드란 추상 클래스를 상속 받는 자식 클래스에서 반드시 포함해야하는
+실체 클래스의 공통적인 메서드를 의미
+
+* Up-casting & Down-casting(타입변환)
+- Up-Casting은 자식 클래스 타입을 부모 클래스타입으로 변환하는것 (자동으로 타입 변환)
+- Down-Casting은 부모 클래스타입을 자식클래스 타입으로 강제로 변환시키는것 (강제 타입변환)
+
+------------------------------------------------------------------------------------------------------------------------
+20240702(화) 15일차
+
+**********************************************************************
+package Chapter11;
+
+//up-casting 다형성 - 다형성이란 하나의 객체가 여러가지 타입을 가질 수 있는 것입니다.
+// 부모 클래스의 참조변수로 자식 클래스의 인스턴스를 참조하는 방식으로 많이 사용합니다.
+
+abstract class HyperCar {
+	public abstract void HyperCarRun();
+}
+
+class Bugatti extends HyperCar {
+	@Override
+	public void HyperCarRun() {
+		System.out.println("SuperCar Bugatti Run!");
+	}
+}
+
+class Laferrari extends HyperCar {
+	@Override
+	public void HyperCarRun() {
+		System.out.println("SuperCar Laferrari Run!");
+	}
+}
+
+class Benz extends HyperCar {
+	@Override
+	public void HyperCarRun() {
+		System.out.println("SuperCar Benz Run!");
+	}
+}
+
+class Driver {
+	// HyperCar hyperCar -> 부모클래스를 매개변수로 쓸수 있음 ! (ex: 부모클래스명 변수명 = new Bugatti();)
+	public void drive(HyperCar hyperCar) {
+		hyperCar.HyperCarRun();
+	}
+}
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Driver drive = new Driver();
+		drive.drive(new Bugatti()); // drive 객체에 인자값에 자식 클래스가 들어감
+		drive.drive(new Laferrari()); // drive 객체에 인자값에 자식 클래스가 들어감
+		
+		drive.drive(new Benz());
+	}
+
+}
+
+**********************************************************************
+package Chapter11;
+
+class ParentClass {
+	public String parent;
+	public void ParentRun() {
+		System.out.println("Parents class Run!");
+	}
+}
+
+class ChildClass extends ParentClass {
+	public String child;
+	public void ChildRun() {
+		System.out.println("Child class Run!");
+	}
+}
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ParentClass parent = new ChildClass(); // up-casting 되면 자식클래스 접근 불가능!! 가능한 방법은 override 해주면됨
+		parent.parent = "부모클래스";
+		System.out.println(parent.parent);
+		parent.ParentRun();
+		
+		System.out.println();
+		
+		
+		// down-casting -> 무조건 up-casting이 되어야 down-casting 사용 할수있음!(강제로 하는거임)
+		// -> 자식클래스명 변수명 = (자식클래스명(형변환))부모클래스변수명;
+		ChildClass child = (ChildClass)parent;
+		child.child = "자식클래스";
+		System.out.println(child.child);
+		child.ChildRun();
+	}
+}
+
+**********************************************************************
+package Chapter11;
+
+//설계를 위한 문법 interface
+interface TV {
+	//상수같은경우는 static final 을 입력해야되고,
+	// 추상메서드는 abstract 를 넣어야됨
+	//interface 안에 들어가있으면 자동으로 상수, 메서드 키워드들이 들어감
+	
+	//상수(상수는 대문자로만)
+	public int MIN_VOLUME = 0;
+	public int MAX_VOLUME = 100;
+	
+	// 추상 메서드
+	public void turnOn();
+	public void turnOff();
+	public void changeVolume(int volume);
+	public void changeChannel(int channel);
+}
+
+class QLEDTV implements TV {
+	public void turnOn() {
+		System.out.println("켜다");
+	}
+	public void turnOff() {
+		System.out.println("끄다");
+	}
+	public void changeVolume(int volume) {
+		System.out.println(volume + "으로 볼륨을 조절하다.");
+	}
+	public void changeChannel(int channel) {
+		System.out.println(channel + "번으로 채널을 변경하다.");
+	}
+}
+
+class NEWTV implements TV {
+	public void turnOn() {
+		System.out.println("new TV 켜다");
+	}
+	public void turnOff() {
+		System.out.println("new TV 끄다");
+	}
+	public void changeVolume(int volume) {
+		System.out.println("new TV" + volume + "으로 볼륨을 조절하다.");
+	}
+	public void changeChannel(int channel) {
+		System.out.println("new TV" + channel + "번으로 채널을 변경하다.");
+	}
+}
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TV tv = new QLEDTV();
+		tv.turnOn();
+		tv.changeChannel(9);
+		tv.changeVolume(99);
+		tv.turnOff();
+		
+		System.out.println();
+		
+		TV tv2 = new NEWTV();
+		tv2.turnOn();
+		tv2.changeChannel(9);
+		tv2.changeVolume(99);
+		tv2.turnOff();
+
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+public class EX01 {
+	
+	public static void main(String[] args) {
+		// 예외처리 예제
+		try {
+			System.out.println("수행 코드 작성 영역");
+		} catch (NullPointerException e) {
+			System.out.println("NullPointer 예외가 발생될 경우 실행!");
+		} catch (Exception e) { // 맨마지막에 모든 에러는 Exception e 에러 작성
+			System.out.println("예외 발생 시 실행될 코드 작성 영역!");
+		} finally {
+			System.out.println("예외 여부와 관계 없이 무조건 실행!");
+			System.out.println("finally 은 생략 가능");
+		}
+	}
+}
+
+**********************************************************************
+package Chapter12;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 일반예외 - 코드 실행전에 체크되는 에러
+		
+		Class test = Class.forName("Animal");
+		
+		//ClassNotFoundException 오류 
+		// 오류 해결 -> EX03
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 일반예외 - 코드 실행전에 체크되는 에러 (해결)
+		try {
+			Class test = Class.forName("Animal");
+		} catch(Exception e) { // 에러종류를 모를땐 Exception e 사용
+			System.out.println("예외 발생!");
+		}
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 실행 예외
+		String str = null;
+		System.out.println(str.charAt(0));
+		//java.lang.NullPointerException 에러
+		// 오류 해결 -> EX05
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 실행 예외 (해결)
+		try {
+			String str = null;
+			System.out.println(str.charAt(0));
+		} catch (NullPointerException e) {
+			System.out.println("NullPointerException 발생!");
+		} finally {
+			System.out.println("무조건 실행되며 생략가능!");
+		}
+
+	}
+
+}
+
+
+**********************************************************************
+
+package Chapter12;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 배열을 사용할때 에러
+		int[] arr = {1, 2, 3};
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println(arr[i] + " ");
+			//java.lang.ArrayIndexOutOfBoundsException 에러
+		}
+	}
+}
+
+
+**********************************************************************
+package Chapter12;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 배열을 사용할때 에러
+		int[] arr = {1, 2, 3};
+
+		// 해결 방법! (아래)
+		try {
+			for (int i = 0; i < 5; i++) {
+				System.out.println(arr[i] + " ");
+				//java.lang.ArrayIndexOutOfBoundsException 에러
+			}
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("ArrayIndexOutOfBoundsException 발생!");
+		} finally {
+			System.out.println("finally은 무조건 실행되며 생략가능!");
+		}
+		
+		//선생님 해결
+		try {
+			for (int i = 0; i < 5; i++) {
+				System.out.println(arr[i] + " ");
+				//java.lang.ArrayIndexOutOfBoundsException 에러
+			}
+		} catch (Exception e) {
+			// 메시지 직접 작성
+			System.out.println("인덱스 범위를 벗어났습니다.");
+		}
+	}
+
+}
+
+
+**********************************************************************
+
+** 인터페이스 (Interface)
+- 인터페이스란 객체의 사용방법을 정의한 타입을 의미
+기능을 구현하지 하지않고 나열만 하고 상수랑 추상메서드만 가질수 있다.
+예) 티비가 가지고 있는 기능은 크고,끄고, 볼륨 조절, 채널 변경 처럼 사용방법을 나열만함
+
+** 예외 처리(필수 파트)
+* 예외(Exception)
+- 사용자의 잘못 된 조작이나, 개발자의 잘 못된 코드작성으로 발생하는 프로그램상의 오류
+일반예외(Checked Exception)
+- 컴파일 전 발생하는 에러로 검사를 수행 할 수 있음
+실행 예외(Unchecked Exception)
+- 실행 시 발생하는 예외이므로 컴파일 전 검사가 불가능
+
+Runtime Exception 종류
+실행예외(Unchecked Exception)
+- ArithmeticException : 어떠 한 수를 0으로 나누고자 할 때 발생
+- NullPointerException : Null 값을 갖는 참조변수를 사용하고자 할 때 발생
+- ClassCastException : 허용되지 않는 클래스 타입변환을 진행 할 때 발생
+- NegativeArraySizeException : 배열의 크기가 음수값인 경우 발생
+- OutOfMemoryException : 사용가능한 Heap영역의 Memory가 부족 할 때 발생
+- NoClassDefFoundException :  원하는 클래스를 탐색하지 못했을 때 발생
+- ArrayIndexOutOfBoundsException :  배열이 갖는 인덱스 범위를 벗어났을 때 발생
+
+* 예외 처리(Exception Handing)
+try - catch - finally 기본 구조
+try {
+	수행 코드
+} catch(예외1) {
+	수행코드
+} catch(예외2) {
+	수행 코드
+} finally {
+	수행코드
+}
+
+------------------------------------------------------------------------------------------------------------------------
+20240703(수) 16일차
+
+**********************************************************************
+package Chapter12;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// 해결2
+		int[] arr = {1, 2, 3};
+		
+		
+		try {
+			for (int i = 0; i < 5; i++) {
+				System.out.println(arr[i] + " ");
+				//java.lang.ArrayIndexOutOfBoundsException 에러
+			}
+		} catch (Exception e) {
+			// 예외객체 메시지 
+			System.err.println(e.getMessage());
+		}
+	}
+
+}
+
+
+**********************************************************************
+package Chapter12;
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// 해결3
+		int[] arr = {1, 2, 3};
+		
+		try {
+			for (int i = 0; i < 5; i++) {
+				System.out.println(arr[i] + " ");
+				//java.lang.ArrayIndexOutOfBoundsException 에러
+			}
+		} catch (Exception e) {
+			//예외 클래스 종류랑, 예외 메시지
+			System.err.println(e);
+		}
+	}
+
+}
+
+
+**********************************************************************
+package Chapter12;
+
+import java.util.Scanner;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		// 예외가 여러개 인 경우
+		Scanner input = new Scanner(System.in);
+		int[] arr = {1, 2, 3};
+		try {
+			System.out.print("정수 입력: ");
+			int num1 = input.nextInt();
+			System.out.print("정수 입력: ");
+			int num2 = input.nextInt();
+			int result = num1 / num2;
+			System.out.println("나눗셈 결과: " + result);
+			
+			System.out.print("인덱스 범위 입력: ");
+			int su = input.nextInt();
+			
+			for (int i = 0; i < su; i++) {
+				System.out.println(arr[i] + " ");
+			}
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("인덱스 범위를 벗어났습니다.");
+		} catch (ArithmeticException e) {
+			System.out.println("어떠한 값을 \"0\"으로 나눌 수 없습니다.");
+		} catch (Exception e) { // 가장 마지막에 처리해야
+			System.out.println("모든 실행 예외 처리 진행!");
+		} finally {
+			input.close();
+		}
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+class ExceptionTest1 {
+	public void printName(String name) {
+		if ("펭수".equals(name)) {
+			return; // 리턴하면 메소드 밖으로 빠져 나감
+		}
+		System.out.println(name + "님 안녕하세요.");
+		System.out.println(name + "님 반갑습니다.");
+		System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX11 {
+
+	public static void main(String[] args) {
+		// 예외 직접 만들기1
+		ExceptionTest1 et1 = new ExceptionTest1();
+		
+		et1.printName("펭수");
+		et1.printName("범이");
+
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+class UserException2 extends RuntimeException {
+	// 실행 예외 생성( 실행 예외는 RuntimeException 상속 받으면 됨.)
+}
+
+class ExceptionTest2 {
+	public void printName(String name) {
+		if ("펭수".equals(name)) {
+			throw new UserException2();
+		}
+		System.out.println(name + "님 안녕하세요.");
+		System.out.println(name + "님 반갑습니다.");
+		System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX12 {
+
+	public static void main(String[] args) {
+		// 예외 직접 만들기2
+		ExceptionTest2 et2 = new ExceptionTest2();
+		et2.printName("펭수");
+		et2.printName("범이");
+
+	}
+}
+
+**********************************************************************
+package Chapter12;
+
+class UserException3 extends Exception {
+	// 컴파일 예외 생성( Exception 은 모든 예외.)
+}
+
+class ExceptionTest3 {
+	public void printName(String name) {
+		if ("펭수".equals(name)) {
+			throw new UserException3();
+			// 컴파일 에러는 미리 예외가 발생할거라고 알려줌
+			// 처리는 EX14 확인!
+		}
+		System.out.println(name + "님 안녕하세요.");
+		System.out.println(name + "님 반갑습니다.");
+		System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX13 {
+
+	public static void main(String[] args) {
+		// 예외 직접 만들기3
+		ExceptionTest3 et3 = new ExceptionTest3();
+		et3.printName("펭수");
+		et3.printName("범이");
+
+	}
+}
+
+**********************************************************************
+package Chapter12;
+
+class UserException4 extends Exception {
+	// 컴파일 예외 생성( Exception 은 모든 예외.)
+}
+
+class ExceptionTest4 {
+	public void printName(String name) {
+		// 예외 처리
+		try {
+			if ("펭수".equals(name)) {
+				throw new UserException4();	
+			}
+			
+			System.out.println(name + "님 안녕하세요.");
+			System.out.println(name + "님 반갑습니다.");
+			System.out.println(name + "님 또 만나요.");
+		} catch(UserException4 e) {
+			System.out.println("UserException4 이 발생했습니다.");
+		}
+	}
+}
+
+public class EX14 {
+
+	public static void main(String[] args) {
+		// 예외 처리
+		ExceptionTest4 et4 = new ExceptionTest4();
+		et4.printName("펭수");
+		et4.printName("범이");
+		
+	}
+}
+
+**********************************************************************
+package Chapter12;
+
+class UserException5 extends Exception {
+	// 컴파일 예외 생성( Exception 은 모든 예외.)
+}
+
+
+class ExceptionTest5 {
+	public void printName(String name) throws UserException5 {
+		if ("펭수".equals(name)) {
+			throw new UserException5();
+		}
+		System.out.println(name + "님 안녕하세요.");
+		System.out.println(name + "님 반갑습니다.");
+		System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX15 {
+
+	public static void main(String[] args) {
+		// 예외 던지기
+		ExceptionTest5 et5 = new ExceptionTest5();
+		et5.printName("펭수");
+		et5.printName("범이");
+		
+		//에러 EX16 확인
+
+	}
+
+}
+
+**********************************************************************
+package Chapter12;
+
+class UserException6 extends Exception {
+	// 컴파일 예외 생성( Exception 은 모든 예외.)
+}
+
+class ExceptionTest6 {
+	public void printName(String name) throws UserException6 {
+		if ("펭수".equals(name)) {
+			throw new UserException6();
+		}
+		System.out.println(name + "님 안녕하세요.");
+		System.out.println(name + "님 반갑습니다.");
+		System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX16 {
+
+	public static void main(String[] args) {
+		// 예외 던지기
+		ExceptionTest6 et6 = new ExceptionTest6();
+		
+		try {
+			et6.printName("펭수");
+			et6.printName("범이");
+
+		} catch (UserException6 e) {
+			System.out.println("UserException6 이 발생했습니다.");
+		}
+		
+	}
+}
+
+**********************************************************************
+
+** 예외 전가(throw, throws)
+사용자의 잘못 된 조작이나, 개발자의 잘 못된 코드작성으로 발생하는 프로그램상의 오류
+- throw: 메서드 내에서 예외를 발생시킬때 사용
+- throws: 실행중인 메서드 내부에서 발생 한 예외를 다른 곳으로 전가
+
+------------------------------------------------------------------------------------------------------------------------
+
+공유폴더 들어오는 방법
+1.win + r => 실행
+2. \\192.168.41.71 입력후 확인
+3. 공유폴더(선생님 폴더) 클릭
+4. 파일 복사/ 바탕화면에 전용(성함) 폴더에 붙여넣기
+
+집에가기전 확인 
+1. 자료 => usb 또는 이메일 
+2. 전용 폴더에 자료 삭제 & 휴지통 비우기
+3. 컴퓨터 종료
+
+
+
+
+

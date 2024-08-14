@@ -1,0 +1,143 @@
+------------------------------------------------------------------------------------------
+package Chapter7;
+
+class Person {
+	String name = "송일국";
+	int age = 52;
+	boolean isMarried = true;
+	int numberOfChildren = 3;
+}
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person person = new Person();
+		
+		System.out.println("이름: " + person.name);
+		System.out.println("나이: " + person.age);
+		System.out.println("결혼 여부: " + person.isMarried);
+		System.out.println("자녀 수: " + person.numberOfChildren);
+	}
+
+}
+
+------------------------------------------------------------------------------------------
+package Chapter7;
+
+class Student {
+	public void studentAvrScore(String name, int kor, int eng, int math) {
+		int avr = (kor + eng + math)/3;
+		System.out.println(name + "의 성적 평균은 " + avr + "입니다.");
+	}
+}
+
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student student = new Student();
+		
+		student.studentAvrScore("장원영", 100, 100, 100);
+		student.studentAvrScore("안유진", 90, 90, 90);
+		student.studentAvrScore("가을", 80, 80, 80);
+	}
+
+}
+
+------------------------------------------------------------------------------------------
+package Chapter7;
+
+class StudentReturn {
+	public String studentAvrScore(String name, int kor, int eng, int math) {
+		int avr = (kor + eng + math)/3;
+		return name + "의 성적 평균은 " + avr + "입니다.";
+	}
+}
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentReturn student = new StudentReturn();
+		
+		String student1 = student.studentAvrScore("장원영", 100, 100, 100);
+		String student2 = student.studentAvrScore("안유진", 90, 90, 90);
+		String student3 = student.studentAvrScore("가을", 80, 80, 80);
+		
+		System.out.println(student1);
+		System.out.println(student2);
+		System.out.println(student3);
+	}
+
+}
+
+------------------------------------------------------------------------------------------
+package Chapter7;
+
+import java.util.Scanner;
+
+class Absolute {
+	public int absoluteCheck(int num) {
+		if (num < 0)
+			return -num;
+		else
+			return num;
+	}
+	public void outPut(int num, int result) {
+		System.out.println("입력값: " + num);
+		System.out.println("절대값: " + result);
+	}
+}
+
+public class Quiz4 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		Absolute ab = new Absolute();
+		System.out.print("정수 입력: ");
+		int num = input.nextInt();
+		int result = ab.absoluteCheck(num);
+		ab.outPut(num, result);
+		input.close();
+	}
+}
+------------------------------------------------------------------------------------------
+package Chapter7;
+
+import java.util.Scanner;
+
+class ReseverClass{
+	public int reverse(int num) {
+		int tem=0, result=0;
+		while(true) {
+			tem = num % 10;
+			num = num /10;
+			result = (result + tem) * 10;
+			if(num == 0) 
+				return result / 10;
+		}
+	}
+	public int inData(){
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num = input.nextInt();
+		input.close();
+		return num;
+	}
+	public void outData(){
+		int num = inData();
+		int result = reverse(num);
+		System.out.println("변환 전 Data: " + num);
+		System.out.println("변환 후 Data: " + result);
+	}
+}
+public class Quiz5 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ReseverClass revCode = new ReseverClass();
+		revCode.outData();
+	}
+}
+
+------------------------------------------------------------------------------------------

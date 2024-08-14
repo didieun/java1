@@ -1,0 +1,104 @@
+------------------------------------------------------------------------------------
+package Chapter5;
+public class Quiz1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long save = 0, money = 10;
+		int day = 1;
+		
+		for (day = 1; day <= 30; day++) {
+			save += money;
+			money *= 2;
+		}
+		--day;
+		System.out.println(day + "일 저축액: " + save);
+	}
+}
+------------------------------------------------------------------------------------
+package Chapter5;
+public class Quiz2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 2; i <= 9; i++) {
+			for (int j = 1 ; j <= 9; j++) {
+				System.out.print(i + "X" + j + "=" + i*j + "\t");
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		
+		for (int i = 1; i <= 9; i++) {
+			for (int j = 2 ; j <= 9; j++) {
+				System.out.print(j + "X" + i + "=" + i*j + "\t");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+------------------------------------------------------------------------------------
+package Chapter5;
+import java.util.Scanner;
+public class Quiz3 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		int numSum = 0;
+		while(true) {
+			System.out.print("수 입력: ");
+			int num = input.nextInt();
+			numSum += num;
+			if (num == 0) {
+				System.out.println("합: " + numSum);
+				System.out.println("Program Exit~");
+				break;
+			} else {
+				System.out.println("다시 입력해 주세요!");
+			}
+		}
+		input.close();
+	}
+}
+
+
+
+------------------------------------------------------------------------------------
+package Chapter5;
+public class Quiz4 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= 10; j++) {
+				System.out.print("*" + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+------------------------------------------------------------------------------------
+package Chapter5;
+public class Quiz5 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i = 1;
+		while (i <= 5) {
+			i++;
+			int j = 1;
+			while (j <= 10) {
+				System.out.print("*" + " ");
+				j++;
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+------------------------------------------------------------------------------------

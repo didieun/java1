@@ -1,0 +1,166 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 10; 1 <= i; i--) {
+			System.out.println("JAVA STRING");
+		}
+		
+		for (int i = 10; 1 <= i; i--) {
+			System.out.println(i);
+		}
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 11; i++) {
+			System.out.print(i);
+		}
+		
+		System.out.println();
+		
+		for (int i = 5; i < 11; i++) {
+			System.out.print(i);
+		}
+		
+		System.out.println();
+		
+		for (int i = 5; i < 11; i++) {
+			System.out.print(i + "안녕");
+		}
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		for (int i = 1 ; i < 11; i++) {
+//			int iSum = 0;
+//			iSum = iSum + i;
+//			System.out.println("합: " + iSum);
+//		}
+		
+		int iSum = 0;
+		for (int i = 1 ; i < 11; i++) {
+			iSum = iSum + i;
+			System.out.println("합: " + iSum);
+//			합: 1 = 0 + 1
+//			합: 3
+//			합: 6
+//			합: 10
+//			합: 15
+//			합: 21
+//			합: 28
+//			합: 36
+//			합: 45
+//			합: 55
+
+		}
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// for + if
+		for (int i = 1; i <= 25; i++) {
+			System.out.print(i + "\t");
+			if (i % 5 == 0) {
+				System.out.println();
+			}
+		}
+		
+		// for + if ~ else
+		for (int i = 1; i <= 25; i++) {
+			if (i % 5 == 0) {
+				System.out.println(i);
+			} else {
+				System.out.print(i + "\t");
+			}
+		}
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 1 ; i < 4; i++) {
+			System.out.println("첫 번째 for문!");
+			for (int j = 1; j < 3; j++) {
+				System.out.println("두 번째 for문!");
+			}
+		}
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int evenSum = 0, oddSum = 0;
+		
+		for (int i = 1; i< 11; i++) {
+			if (i % 2 == 0) {
+				evenSum += i;
+			} else {
+				oddSum += i;
+			}
+		}
+		
+		System.out.println("짝수 합: " + evenSum + "홀수 합: " + oddSum);
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int evenSum = 0, oddSum = 0;
+		int i = 1;
+		while (i< 11) {
+			if (i % 2 == 0) {
+				evenSum += i;
+			} else {
+				oddSum += i;
+			}
+			i++;
+		}		
+		System.out.println("짝수 합: " + evenSum + "홀수 합: " + oddSum);
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+

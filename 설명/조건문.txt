@@ -1,0 +1,139 @@
+--------------------------------------------------------------------------------------------
+package Chapter4;
+import java.util.Scanner;
+public class Quiz1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("날짜를 입력하세요: ");
+		int day = input.nextInt();
+		
+		if (day % 7 == 1) {
+			System.out.println(day + "일은 월요일 입니다.");
+		} else if (day % 7 == 2) {
+			System.out.println(day + "일은 화요일 입니다.");
+		} else if (day % 7 == 3) {
+			System.out.println(day + "일은 수요일 입니다.");
+		} else if (day % 7 == 4) {
+			System.out.println(day + "일은 목요일 입니다.");
+		} else if (day % 7 == 5) {
+			System.out.println(day + "일은 금요일 입니다.");
+		} else if (day % 7 == 6) {
+			System.out.println(day + "일은 토요일 입니다.");
+		} else {
+			System.out.println(day + "일은 일요일 입니다.");
+		}
+		
+		input.close();
+	}
+}
+
+--------------------------------------------------------------------------------------------
+package Chapter4;
+import java.util.Scanner;
+public class Quiz2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("첫 번째 정수입력: ");
+		int num1 = input.nextInt();
+		System.out.print("첫 번째 정수입력: ");
+		int num2 = input.nextInt();
+		
+		int max = 0, min = 0;
+		if (num1 > num2) {
+			max = num1;
+			min = num2;
+		} else {
+			max = num2;
+			min = num1;
+		}
+		System.out.println("큰 값: " + max + "작은 값: " + min);
+		input.close();
+	}
+}
+
+--------------------------------------------------------------------------------------------
+package Chapter4;
+import java.util.Scanner;
+public class Quiz3 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("국어 정수입력: ");
+		int kor = input.nextInt();
+		System.out.print("영어 정수입력: ");
+		int eng = input.nextInt();
+		System.out.print("수학 정수입력: ");
+		int math = input.nextInt();
+		
+		int avr = (kor + eng + math) / 3;
+		
+		if (avr < 70) {
+			System.out.println("불합격(평균 점수 미달)");
+		} else if (kor < 60) {
+			System.out.println("불합격(국어 점수 미달)");
+		} else if (eng < 60) {
+			System.out.println("불합격(영어 점수 미달)");
+		} else if (math < 60) {
+			System.out.println("불합격(수학 점수 미달)");
+		} else {
+			System.out.println("합격!");
+		}
+		input.close();
+	}
+}
+
+--------------------------------------------------------------------------------------------
+package Chapter4;
+import java.util.Scanner;
+public class Quiz4 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("년도를 입력 하세요: ");
+		int year = input.nextInt();
+		
+		if (year % 400 == 0) {
+			System.out.println(year + "년도는 윤년 입니다.");
+		} else if (year % 100 == 0) {
+			System.out.println(year + "년도는 평년 입니다.");
+		} else if (year % 4 == 0) {
+			System.out.println(year + "년도는 윤년 입니다.");
+		} else {
+			System.out.println(year + "년도는 평년 입니다.");
+		}
+		input.close();
+	}
+}
+
+--------------------------------------------------------------------------------------------
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Quiz5 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("년도를 입력 하세요: ");
+		int year = input.nextInt();
+		
+		if (year % 4 == 0) {
+			if (year % 100 == 0) {
+				if (year % 400 == 0) {
+					System.out.println(year + "년도는 윤년 입니다.");
+				} else {
+					System.out.println(year + "년도는 평년 입니다.");
+				}
+			} else {
+				System.out.println(year + "년도는 윤년 입니다.");
+			}
+		} else {
+			System.out.println(year + "년도는 평년 입니다.");
+		}
+		input.close();
+	}
+}
+
+--------------------------------------------------------------------------------------------

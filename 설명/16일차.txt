@@ -1,0 +1,267 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// 해결2
+		int[] arr = {1,2,3};
+		
+		try {
+			for (int i = 0; i < 5; i++) {
+				System.out.println(arr[i] + " ");
+				// java.lang.ArrayIndexOutOfBoundsException
+			}
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// 해결3
+		int[] arr = {1,2,3};
+		
+		try {
+			for (int i = 0; i < 5; i++) {
+				System.out.println(arr[i] + " ");
+				// java.lang.ArrayIndexOutOfBoundsException
+			}
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+import java.util.Scanner;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		// 예외가 여러개 인 경우
+		Scanner input = new Scanner(System.in);
+		int [] arr = {1,2,3};
+		try {
+			System.out.print("정수 입력: ");
+			int num1 = input.nextInt();
+			System.out.print("정수 입력: ");
+			int num2 = input.nextInt();
+			int result = num1/num2;
+			System.out.println("나눗셈 결과: " + result);
+			
+			System.out.print("인덱스 범위 입력: ");
+			int su = input.nextInt();
+			
+			for (int i = 0; i<su; i++) {
+				System.out.println(arr[i]);
+			}
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("인덱스 범위를 벗어났습니다.");
+		} catch (ArithmeticException e) {
+			System.out.println("어떠한 값을 \"0\"으로 나눌 수 없습니다.");
+		} catch (Exception e) {
+			System.out.println("모든 실행 예외 처리 진행!");
+		} finally {
+			input.close();
+		}
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+class ExceptionTest1 {
+	public void printName(String name) {
+		if ("펭수".equals(name)) {
+			return;
+		}
+		 System.out.println(name + "님 안녕하세요.");
+		 System.out.println(name + "님 반갑습니다.");
+		 System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX11 {
+
+	public static void main(String[] args) {
+		// 예외 직접 만들기1
+		ExceptionTest1 et1 = new ExceptionTest1();
+		et1.printName("펭수");
+		et1.printName("범이");
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+class UserException2 extends RuntimeException {
+	// 실행 예외 생성
+}
+
+class ExceptionTest2 {
+	public void printName(String name) {
+		if ("펭수".equals(name)) {
+			throw new UserException2();
+		}
+		 System.out.println(name + "님 안녕하세요.");
+		 System.out.println(name + "님 반갑습니다.");
+		 System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX12 {
+
+	public static void main(String[] args) {
+		// 예외 직접 만들기2
+		ExceptionTest2 et2 = new ExceptionTest2();
+		et2.printName("펭수");
+		et2.printName("범이");
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+class UserException3 extends Exception {
+	// 컴파일 예외 생성
+}
+
+class ExceptionTest3 {
+	public void printName(String name) {
+		if ("펭수".equals(name)) {
+			throw new UserException3();
+		}
+		 System.out.println(name + "님 안녕하세요.");
+		 System.out.println(name + "님 반갑습니다.");
+		 System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX13 {
+
+	public static void main(String[] args) {
+		// 예외 직접 만들기3
+		ExceptionTest3 et3 = new ExceptionTest3();
+		et3.printName("펭수");
+		et3.printName("범이");
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+class UserException4 extends Exception {
+	// 컴파일 예외 생성
+}
+
+class ExceptionTest4 {
+	public void printName(String name) {
+		
+		try {
+		if ("펭수".equals(name)) {
+			throw new UserException4();
+		}
+		 System.out.println(name + "님 안녕하세요.");
+		 System.out.println(name + "님 반갑습니다.");
+		 System.out.println(name + "님 또 만나요.");
+		} catch (UserException4 e) {
+			System.out.println("UserException4 이 발생했습니다.");
+		}
+	}
+}
+
+public class EX14 {
+
+	public static void main(String[] args) {
+		// 예외 처리
+		ExceptionTest4 et4 = new ExceptionTest4();
+		et4.printName("펭수");
+		et4.printName("범이");
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+class UserException5 extends Exception {
+	// 컴파일 예외 생성
+}
+
+class ExceptionTest5 {
+	public void printName(String name) throws UserException5 {
+		if ("펭수".equals(name)) {
+			throw new UserException5();
+		}
+		 System.out.println(name + "님 안녕하세요.");
+		 System.out.println(name + "님 반갑습니다.");
+		 System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX15 {
+
+	public static void main(String[] args) {
+		// 예외 던지기
+		ExceptionTest5 et5 = new ExceptionTest5();
+		et5.printName("펭수");
+		et5.printName("범이");
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter12;
+
+class UserException6 extends Exception {
+	// 컴파일 예외 생성
+}
+
+class ExceptionTest6 {
+	public void printName(String name) throws UserException6 {
+		if ("펭수".equals(name)) {
+			throw new UserException6();
+		}
+		 System.out.println(name + "님 안녕하세요.");
+		 System.out.println(name + "님 반갑습니다.");
+		 System.out.println(name + "님 또 만나요.");
+	}
+}
+
+public class EX16 {
+
+	public static void main(String[] args) {
+		// 예외 던지기 + 처리
+		ExceptionTest6 et6 = new ExceptionTest6();
+		
+		try {
+			et6.printName("펭수");
+			et6.printName("범이");
+		} catch (UserException6 e) {
+			System.out.println("UserException6 이 발생했습니다.");
+		}
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------

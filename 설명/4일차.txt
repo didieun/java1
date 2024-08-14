@@ -1,0 +1,209 @@
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 자료형 변환
+		int s1 = 10; // 4byte
+		long s2 = s1; // 8byte
+		short s3; // 2byte
+		s3 = (short)s1;
+		
+		System.out.println(s2);
+		System.out.println(s3);
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+public class EX03 {
+
+	public static void main(String[] args) throws Exception {
+		// 입력 - read()메서드 사용
+		int key = System.in.read();
+		System.out.println(key);
+		
+		key = System.in.read();
+		System.out.println(key);
+		
+		key = System.in.read();
+		System.out.println(key);
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+import java.util.Scanner;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 입력 - Scanner 사용
+		Scanner scanner = new Scanner(System.in);
+		String data;
+		
+		data = scanner.nextLine();
+		System.out.println(data);
+		
+		scanner.close();
+		
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+import java.util.Scanner;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 입력 - Scanner의 다양한 메서드 사용
+		Scanner input = new Scanner(System.in);
+		String st;
+		int num;
+		float f;
+		
+		System.out.print("문자 입력: ");
+		st = input.nextLine();
+		System.out.println("문자 출력: " + st);
+		
+		System.out.print("숫자 입력: ");
+		num = input.nextInt();
+		System.out.println("숫자 출력: " + num);
+		
+		System.out.print("실수 입력: ");
+		f = input.nextFloat();
+		System.out.println("실수 출력: " + f);
+		
+		input.close();
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name = "김말이";
+		int age = 20;
+		float height = 173.3f;
+		int iq = 120;
+		char grade = 'B';
+		
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("키: " + height);
+		System.out.println("아이큐: " + iq);
+		System.out.println("등급: " + grade) ;
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+public class Quiz2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String id = "TEST1234";
+		int password = 991005;
+		
+		System.out.println("ID: " + id);
+		System.out.println("PASSWORD: " + password);
+		
+		int noodle = 5000 * 3;
+		int rice = 6000 * 2;
+		int discount = 3000;
+		
+		int total = noodle + rice;
+		int result = total - discount;
+		
+		System.out.println("짜장면: " + noodle);
+		System.out.println("짜장밥: " + rice);
+		System.out.println("합계: " + total);
+		System.out.println("최종금액: " + result);
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+import java.util.Scanner;
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		String name;
+		int kor, eng, math;
+		
+		System.out.print("당신의 이름은 무엇입니까? ");
+		name = input.nextLine();
+		
+		System.out.print(name + "님의 국어 점수: ");
+		kor = input.nextInt();
+		
+		System.out.print(name + "님의 영어 점수: ");
+		eng = input.nextInt();
+		
+		System.out.print(name + "님의 수학 점수: ");
+		math = input.nextInt();
+		
+		System.out.println();
+		System.out.println("===================================");
+		System.out.println("이름: " + name);
+		System.out.println("===================================");
+		System.out.println("국어: " + kor);
+		System.out.println("영어: " + eng);
+		System.out.println("수학: " + math);
+		System.out.println("===================================");
+		System.out.println("합계: " + (kor + eng + math));
+		System.out.println("===================================");
+		input.close();
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+import java.util.Scanner;
+
+public class Quiz4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("키: ");
+		float height = input.nextFloat();
+		System.out.print("몸무게: ");
+		float weight = input.nextFloat();
+		
+		float h = height / 100;
+		
+		float bmi = weight / (h * h);
+		
+		System.out.println("bmi: " + bmi);
+		input.close();
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------

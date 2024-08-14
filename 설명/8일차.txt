@@ -1,0 +1,156 @@
+----------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+import java.util.Scanner;
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		while (true) {
+			System.out.print("11보다 작은 정수 입력: ");
+			int num = input.nextInt();
+			
+			if (num <= 10) {
+				System.out.println(num + "은(는) 11보다 작습니다.");
+				break;
+			} else {
+				System.out.println("다시 입력해주세요!");
+				continue;
+			}
+		}
+		input.close();
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+package Chapter5;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		// do - while
+		int num = 0, numSum = 0;
+		do {
+			num++;
+			numSum += num;
+		} while (num <= -1);
+		System.out.println("do - while numSum : " + numSum);
+		
+		// while
+		num = 0; numSum = 0;
+		while (num <= -1) {
+			num++;
+			numSum += num;
+		}
+		
+		System.out.println("while numSum : " + numSum);
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+package Chapter6;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name = "펭수";
+		String address = "남극";
+		String phone = "010-1234-5678";
+		int age = 20;
+		
+		System.out.println(name);
+		System.out.println(address);
+		System.out.println(phone);
+		System.out.println(age);
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+package Chapter6;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ref_1 = "펭수";
+		String ref_2 = "펭수";
+		String ref_3 = "범이";
+		
+		System.out.println(ref_1 == ref_2);
+		System.out.println(ref_1 != ref_2);
+		System.out.println(ref_1 == ref_3);
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+package Chapter6;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ref_1 = "펭수";
+		String ref_2 = new String("펭수");
+		String ref_3 = "범이";
+		
+		System.out.println(ref_1 == ref_2);
+		System.out.println(ref_1 != ref_2);
+		System.out.println(ref_1 == ref_3);
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+package Chapter6;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ref_1 = "펭수";
+		String ref_2 = new String("펭수");
+		String ref_3 = "범이";
+		
+		System.out.println(ref_1.equals(ref_2));
+		System.out.println(ref_1.equals(ref_3));
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+package Chapter6;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = new String("JavaProgramming");
+		
+		System.out.println(str.length());
+		System.out.println(str.charAt(4));
+		
+		String addStr;
+		addStr = "A";
+		System.out.println(addStr);
+		addStr += "B";
+		System.out.println(addStr);
+		
+		System.out.println(str.charAt(0) == 'J');
+		System.out.println(str.charAt(0) == 'j');
+		
+		System.out.println(str.charAt(1) - 32);
+		System.out.println((char)(str.charAt(1) - 32));
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------
+

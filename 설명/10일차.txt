@@ -1,0 +1,231 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+// field(필드)
+
+class Car {
+	String company = "제네시스";
+	String model = "GV90";
+	String color = "White";
+	int maxSpeed = 200;
+	int rpm;
+	int currentSpeed;
+	boolean enginStart;
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 객체 생성
+		Car car = new Car();
+		
+		// 필드 데이터 출력
+		System.out.println("제조 회사: " + car.company);
+		System.out.println("차 모델명: " + car.model);
+		System.out.println("색상이름: " + car.color);
+		System.out.println("최대 속도: " + car.maxSpeed);
+		System.out.println("회전 속도: " + car.rpm);
+		System.out.println("현재 속도: " + car.currentSpeed);
+		System.out.println("시동 여부: " + car.enginStart);
+		
+		// 필드 값 변경
+		car.rpm = 3000;
+		car.currentSpeed = 77;
+		car.enginStart = true;
+		
+		System.out.println("회전 속도: " + car.rpm);
+		System.out.println("현재 속도: " + car.currentSpeed);
+		System.out.println("시동 여부: " + car.enginStart);
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+import java.util.Scanner;
+
+// method(메소드)
+
+// 1. 긴코드 축약
+
+class Hi {
+	public void MethodTest_EX02() {
+		System.out.println("안녕하세요");
+		System.out.println("반갑습니다");
+		System.out.println("또 만나요");
+		// 100줄의 코드
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 1. hi 객체 생성
+		Hi hi = new Hi();
+		Scanner input = new Scanner(System.in);
+		input.next();
+		
+		// 2. 메소드 호출()
+		hi.MethodTest_EX02();
+		hi.MethodTest_EX02();
+		hi.MethodTest_EX02();
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+// method(메소드)
+
+// 2. 마법 모자를 만들고 싶을때(매개 변수)
+class MagicHat {
+	public void MethodTest_EX03(int num) {
+		num += 1;
+		System.out.println(num);
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 1. magichat객체 생성
+		MagicHat magichat = new MagicHat();
+		
+		
+		// 2. 메소드 호출 (인자)
+		magichat.MethodTest_EX03(1);
+		magichat.MethodTest_EX03(2);
+		magichat.MethodTest_EX03(3);
+		magichat.MethodTest_EX03(99);
+		magichat.MethodTest_EX03(1000);
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+// 3. 긴코드 축약 + 마법 모자를 만들고 싶을때(매개 변수)
+
+class Hi2 {
+	public void MethodTest_EX04(String name) {
+		System.out.println(name + "님 안녕하세요");
+		System.out.println(name + "님 반갑습니다");
+		System.out.println(name + "님 또만나요");
+	}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 1. hi 객체 생성
+		Hi2 hi2 = new Hi2();
+		
+		// 2. 메소드 호출
+		hi2.MethodTest_EX04("장원영");
+		hi2.MethodTest_EX04("안유진");
+		hi2.MethodTest_EX04("가을");
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+// 4. print사용
+
+class Test1 {
+	public void MethodTest_EX05_01() {
+		System.out.println(10);
+	}
+	public void MethodTest_EX05_02() {
+		System.out.println(20);
+	}
+}
+
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 객체 생성
+		Test1 test1 = new Test1();
+		
+		// 메소드 호출
+		test1.MethodTest_EX05_01();
+		test1.MethodTest_EX05_02();
+		
+		System.out.println(test1.MethodTest_EX05_01() + test1.MethodTest_EX05_02());
+		// The operator + is undefined for the argument type(s) void, void
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+// 5. return 사용
+
+class Test2 {
+	public int MethodTest_EX06_01() {
+		return 10;
+	}
+	
+	public int MethodTest_EX06_02() {
+		return 20;
+	}
+}
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 객체 생성
+		Test2 test2 = new Test2();
+		
+		// 메서드 호출
+		System.out.println(test2.MethodTest_EX06_01());
+		System.out.println(test2.MethodTest_EX06_02());
+		
+		System.out.println(test2.MethodTest_EX06_01() + test2.MethodTest_EX06_02());
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter7;
+
+// 6. 지역변수
+
+class MethodLocalVariable {
+	public void MethodTestEX07_01() {
+		int a = 10, b = 20;
+		MethodTestEX07_02(a,b);
+		System.out.println("EX07_01 => a : " + a);
+		System.out.println("EX07_01 => b : " + b);
+	}
+	public void MethodTestEX07_02(int a, int b) {
+		a += 100; b += 200;
+		System.out.println("EX07_02 => a : " + a);
+		System.out.println("EX07_02 => b : " + b);
+	}
+}
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 1. localVal 객체 생성
+		MethodLocalVariable localVal = new MethodLocalVariable();
+		
+		// 2. MethodTest_EX01_01() 호출
+		localVal.MethodTestEX07_01();
+		
+		// 3. 결과 확인
+
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

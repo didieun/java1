@@ -1,0 +1,293 @@
+-----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter11;
+
+class MyCalc {
+	public void calcMethod(int num1, int num2) {
+		int sum = num1 + num2;
+		System.out.println("합: " + sum);
+	}
+}
+
+class Computer extends MyCalc {
+	public void phoneMethod(int num1, int num2) {
+		System.out.println("컴퓨터 계산기 실행");
+		calcMethod(num1, num2);
+	}
+}
+
+class HandPhone extends MyCalc {
+	public void phoneMethod(int num1, int num2) {
+		System.out.println("핸드폰 계산기 실행");
+		calcMethod(num1, num2);
+	}
+}
+
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer com = new Computer();
+		com.calcMethod(100, 200);
+		
+		HandPhone phone = new HandPhone();
+		phone.calcMethod(200, 300);
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter11;
+
+class Ferrari1 {
+	private int year;
+	public Ferrari1(int year) {
+		this.year = year; 
+	}
+	public int getYear() {
+		return year;
+	}
+	public void speed() {
+		System.out.println(getYear() + "년 씩 페라리 최대 속도: 300km");
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ferrari1 myCar = new Ferrari1(2023);
+		myCar.speed();
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter11;
+
+class Ferrari2 {
+	protected int year;
+	public Ferrari2(int year) {
+		this.year = year; 
+	}
+	public int getYear() {
+		return year;
+	}
+	public void speed() {
+		System.out.println(getYear() + "년 씩 페라리 최대 속도: 300km");
+	}
+}
+
+class NewFerrari extends Ferrari2 {
+	public NewFerrari(int year) {
+		super(year);
+	}
+	
+	@Override
+	public void speed() {
+		if (super.year == 2024) {
+			System.out.println(getYear() + "년 식 페라리 최대 속도: 400km");
+		} else {
+			super.speed();
+		}
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 객체1(2023)
+		NewFerrari myNewCar1 = new NewFerrari(2023);
+		myNewCar1.speed();
+		
+		// 객체2(2024)
+		NewFerrari myNewCar2 = new NewFerrari(2024);
+		myNewCar2.speed();
+		
+
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter11;
+
+import java.util.Scanner;
+
+final class A {
+	protected String str;
+	public A(String str) {
+		this.str = str;
+	}
+	
+	public final void Method1() {
+		System.out.println("Parents Class!");
+	}
+}
+
+class B extends A {
+	public B(String str) {
+		super(str);
+	}
+	
+	@Override
+	public void Method1() {
+		if (super.str.equals("Parents")) {
+			super.Method1();
+		} else {
+			System.out.println("Child Class!");
+		}
+	}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("Parents or Child input: ");
+		String str = input.next();
+		B test = new B(str);
+		test.Method1();
+		input.close();
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter11;
+
+import java.util.Scanner;
+
+abstract class Machine {
+	Scanner input = new Scanner(System.in);
+	protected String Owner;
+	protected String Serial;
+	protected Machine(String Owner, String Serial) {
+		this.Owner = Owner;
+		this.Serial = Serial;
+	}
+	public abstract void turnOn();
+	public abstract void machineInfo();
+}
+
+
+class Monitor extends Machine {
+	public Monitor(String Owner, String Serial) {
+		super(Owner, Serial);
+		}
+		
+		@Override
+		public void turnOn() {
+			System.out.println("모니터 전원 On");
+		}
+		
+		@Override
+		public void machineInfo() {
+			System.out.println("관리자: " + this.Owner);
+			System.out.println("관리번호: " + this.Serial);
+			System.out.print("전원을 키시겠습니까(y/n)? ");
+			char flag = input.next().charAt(0);
+			
+			if (flag == 'y' || flag == 'Y') {
+				turnOn();
+
+		}
+	}
+}
+
+
+class Com extends Machine {
+	public Com(String Owner, String Serial) {
+		super(Owner, Serial);
+		}
+		
+		@Override
+		public void turnOn() {
+			System.out.println("컴퓨터 전원 On");
+		}
+		
+		@Override
+		public void machineInfo() {
+			System.out.println("관리자: " + this.Owner);
+			System.out.println("관리번호: " + this.Serial);
+			System.out.print("전원을 키시겠습니까(y/n)? ");
+			char flag = input.next().charAt(0);
+			
+			if (flag == 'y' || flag == 'Y') {
+				turnOn();
+
+		}
+	}
+}
+
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Monitor mo = new Monitor("Admin_1", "1-100");
+		mo.machineInfo();
+		
+		Com com = new Com("Admin_2", "2-200");
+		com.machineInfo();
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter11;
+
+class Upcasting_P {
+	public String name;
+	Upcasting_P(String name) {
+		this.name = name;
+	}
+	public void getClassName() {
+		System.out.println(name);
+		System.out.println("Upcasting_P Test");
+	}
+}
+
+class Upcasting_C1 extends Upcasting_P {
+	Upcasting_C1(String name) {
+		super(name);
+	}
+	public void getClassName() {
+		System.out.println(name);
+		System.out.println("Upcasting_C1 Test");
+	}
+}
+
+class Upcasting_C2 extends Upcasting_P {
+	Upcasting_C2(String name) {
+		super(name);
+	}
+	public void getClassName() {
+		System.out.println(name);
+		System.out.println("Upcasting_C2 Test");
+	}
+	public void Child_No2() {
+		System.out.println("Child_No2_Method!");
+	}
+}
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Upcasting_P upcasting = new Upcasting_P("Parents");
+		upcasting.getClassName();
+		
+		upcasting = new Upcasting_C1("Child_No1");
+		upcasting.getClassName();
+		
+		upcasting = new Upcasting_C2("Child_No2");
+		upcasting.getClassName();
+		upcasting.Child_No2();
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------

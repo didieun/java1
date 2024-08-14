@@ -1,0 +1,225 @@
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter3;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 산술 연산자
+		int data1, data2;
+		data1 = data2 = 5;
+		
+		System.out.println(data1 + "+" + data2 + "=" + (data1+data2));
+		System.out.println(data1 + "-" + data2 + "=" + (data1-data2));
+		System.out.println(data1 + "*" + data2 + "=" + (data1*data2));
+		System.out.println(data1 + "/" + data2 + "=" + (data1/data2));
+		System.out.println(data1 + "%" + data2 + "=" + (data1%data2));
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter3;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 대입 & 복합 대입 연산자
+		int data1, data2;
+		data1 = data2 = 5;
+		System.out.println("data1 + 1 = " + (data1 += 1)); // data1 = data1 + 1 
+		System.out.println("data1 - 1 = " + (data1 -= 1)); // data1 = data1 - 1 
+		System.out.println("data1 * data2 = " + (data1 *= data2));
+		System.out.println("data1 / data2 = " + (data1 /= data2));
+		System.out.println("data1 % data2 = " + (data1 %= data2));
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter3;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// 관계 연산자
+		int data1 = 2; double data2 = 2.1;
+		
+		System.out.println("data1 < data2 : " + (data1 < data2));
+		System.out.println("data1 > data2 : " + (data1 > data2));
+		System.out.println("data1 <= data2 : " + (data1 <= data2));
+		System.out.println("data1 >= data2 : " + (data1 >= data2));
+		System.out.println("data1 == data2 : " + (data1 == data2));
+		System.out.println("data1 != data2 : " + (data1 != data2));
+		
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter3;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// 논리 연산자
+		System.out.println("False || False : " + (false || false));
+		System.out.println("False || True : " + (false || true));
+		System.out.println("True || False : " + (true || false));
+		System.out.println("True || True : " + (true || true));
+		
+		System.out.println("False && False : " + (false && false));
+		System.out.println("False && True : " + (false && true));
+		System.out.println("True && False : " + (true && false));
+		System.out.println("True && True : " + (true && true));
+		
+		System.out.println("!True : " + !true);
+		System.out.println("!False : " + !false);
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter3;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 증감 연산자
+		double su = 11.2;
+		
+		su++; System.out.println("su++: " + su); // su = su + 1 
+		++su; System.out.println("++su: " + su);
+		su--; System.out.println("su--: " + su); // su = su - 1 
+		--su; System.out.println("--su: " + su);
+		
+		int data1, data2, data3;
+		data1 = 10; data2 = ++ data1;
+		data1 = 10; data3 = data1++;
+		System.out.println("data2: " + data2);
+		System.out.println("data3: " + data3);
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter3;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 조건 연산자
+		int data1 = 8;
+		String s= (data1 % 2 == 0) ? "짝수" : "홀수";
+		System.out.println(data1 + "=" + s);
+		
+		int data2 = 9;
+		String t = (data2 % 2 == 0) ? "짝수" : "홀수";
+		System.out.println(data2 + "=" + t);
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수입력: ");
+		int num = input.nextInt();
+		
+		if (num == 1) {
+			System.out.println("1입니다.");
+		}
+		
+		input.close();
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter4;
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// 예제2 (***** 중요 *****)
+		
+		if (true) {
+			System.out.println("true입니다.");
+		}
+		
+		if (false) {
+			System.out.println("false입니다.");
+		}
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수 입력: ");
+		
+		int num = input.nextInt();
+		
+		if (num % 2 == 0) {
+			System.out.println(num + "은 짝수 입니다.");
+		}
+		
+		if (num % 2 == 1) {
+			System.out.println(num + "은 홀수 입니다.");
+		}
+		input.close();
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+package Chapter4;
+
+import java.util.Scanner;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("수 입력: ");
+		
+		int num = input.nextInt();
+		
+		if (num % 2 == 0) {
+			System.out.println(num + "은 짝수 입니다.");
+		}
+		
+		else {
+			System.out.println(num + "은 홀수 입니다.");
+		}
+		input.close();
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+

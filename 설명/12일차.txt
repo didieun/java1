@@ -1,0 +1,443 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+class AccessModifier1 {
+	public String MethodTest_EX01(int x, int y) {
+		if (x > y) {
+			return x + "이" + y + "보다 크다.";
+		} else if (x < y) {
+			return y + "이" + x + "보다 크다.";
+		} else {
+			return "두 수는 같습니다.";
+		}
+	}
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccessModifier1 am = new AccessModifier1();
+		String str = am.MethodTest_EX01(100, 200);
+		System.out.println("결과: " + str);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+class AccessModifier2 {
+	private String MethodTest_EX02(int x, int y) {
+		if (x > y) {
+			return x + "이" + y + "보다 크다.";
+		} else if (x < y) {
+			return y + "이" + x + "보다 크다.";
+		} else {
+			return "두 수는 같습니다.";
+		}
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccessModifier2 am = new AccessModifier2();
+		String str = am.MethodTest_EX02(100, 200);
+		System.out.println("결과: " + str);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+class AccessModifier3 {
+	private String MethodTest_EX03(int x, int y) {
+		if (x > y) {
+			return x + "이" + y + "보다 크다.";
+		} else if (x < y) {
+			return y + "이" + x + "보다 크다.";
+		} else {
+			return "두 수는 같습니다.";
+		}
+	}
+	public String subMethodTest_EX03(int x, int y) {
+		String str = MethodTest_EX03(100, 200);
+		return str;
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccessModifier3 am = new AccessModifier3();
+		String str = am.subMethodTest_EX03(100, 200);
+		System.out.println("결과: " + str);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+public class EX04 {
+	public void p_name() {
+		System.out.println("이름: \"펭수\"");
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+public class EX05 {
+	public void p_age() {
+		System.out.println("나이: \"20살\"");
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+public class EX06 {
+	public void p_address() {
+		System.out.println("주소: \"남극\"");
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter8;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EX04 name = new EX04();
+		EX05 age = new EX05();
+		EX06 address = new EX06();
+		
+		name.p_name();
+		age.p_age();
+		address.p_address();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+public class EX01 {
+	
+	static int classVariable = 100; // 클래스 변수
+	int instanceVariable = 200; // 인스턴스 변수
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int localVariable = 300; // 지역 변수
+		
+		System.out.println("클래스 변수: " + classVariable);
+		System.out.println("인스턴스 변수: " + instanceVariable);
+		System.out.println("지역 변수: " + localVariable);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+public class EX02 {
+	
+	static int classVariable = 100; // 클래스 변수
+	int instanceVariable = 200; // 인스턴스 변수
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int localVariable = 300; // 지역 변수
+		
+		EX02 lv = new EX02();
+		System.out.println("클래스 변수: " + classVariable);
+		System.out.println("인스턴스 변수: " + lv.instanceVariable);
+		System.out.println("지역 변수: " + localVariable);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+class Varaible1 {
+	public void variable() {
+		int var = 100;
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible1 va = new Varaible1();
+		va.variable();
+		va.func();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+class Varaible2 {
+	int var = 100;
+	public void variable() {
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible2 va = new Varaible2();
+		va.variable();
+		va.func();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+class Varaible3 {
+	int var = 100;
+	public void variable() {
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible3.var = 300;
+		Varaible3 va = new Varaible3();
+		va.variable();
+		va.func();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+class Varaible4 {
+	static int var = 100; // 클래스 변수
+	public void variable() {
+		System.out.println("var: " + var);
+	}
+	public void func() {
+		System.out.println("var: " + var);
+	}
+}
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Varaible4.var = 300;
+		Varaible4 va = new Varaible4();
+		va.variable();
+		va.func();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+import java.util.Scanner;
+
+class SetGet_01 {
+	private String name;
+	
+	private void setName() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("이름: ");
+		this.name = input.next();
+		input.close();
+	}
+	
+	private String getName() {
+		return this.name;
+	}
+	
+	public void nameSetGet() {
+		setName();
+		System.out.println("이름 출력: " + getName());
+	}
+}
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SetGet_01 sg = new SetGet_01();
+		sg.nameSetGet();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+import java.util.Scanner;
+
+class SetGet_02 {
+	private String name;
+	
+	private void setName() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("이름: ");
+		this.name = input.next();
+		input.close();
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public void nameSetGet() {
+		setName();
+		System.out.println("이름 출력: " + getName());
+	}
+}
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SetGet_02 sg = new SetGet_02();
+		sg.nameSetGet();
+		System.out.println("읽기 전용: " + sg.getName());
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter9;
+
+import java.util.Scanner;
+
+class SetGet_03 {
+	private String name;
+	
+	public void setName() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("이름: ");
+		this.name = input.next();
+		input.close();
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+}
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SetGet_03 sg = new SetGet_03();
+		sg.setName();
+		System.out.println("공개형: " + sg.getName());
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter10;
+
+class Computer1 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer1() {} // 기본 생성자 추가
+}
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer1 com = new Computer1();
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter10;
+
+class Computer2 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer2(String setCPU) {
+		CPU = setCPU;
+	}
+}
+
+public class EX02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer2 com = new Computer2();
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Chapter10;
+
+class Computer3 {
+	String CPU = "Intel";
+	String RAM = "Samsung";
+	String SSD = "Samsung";
+	
+	Computer3(String setCPU) {
+		CPU = setCPU;
+	}
+	
+	Computer3() {}
+}
+
+public class EX03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Computer3 com = new Computer3();
+		System.out.println("CPU: " + com.CPU);
+		System.out.println("RAM: " + com.RAM);
+		System.out.println("SSD: " + com.SSD);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------

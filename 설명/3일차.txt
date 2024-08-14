@@ -1,0 +1,192 @@
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("\\(^-^)/");
+		
+		System.out.println("HELLO\nJAVA");
+		System.out.println("HELLO\tJAVA");
+		System.out.println("내 이름은 \"펭수\" 입니다.");
+		System.out.println("내 이름은 \'펭수\' 입니다.");
+		System.out.println("내 이름은 \\펭수\\ 입니다.");
+		
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+		// 정수 자료형
+		System.out.println(10/3);
+		System.out.println(10/3.0);
+		System.out.println(10%3);
+		
+		System.out.println(1000000000 + 2000000000);
+		System.out.println(1000000000L + 2000000000L);
+		
+		System.out.println('a');
+		System.out.println('a' + 1);
+		System.out.println('a' - 1);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+		// 실수 자료형
+		// double
+		System.out.println(1.2345678901234567890123456789);
+		
+		// float
+		System.out.println(1.2345678901234567890123456789f);
+
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+		// 논리 자료형
+		System.out.println(true);
+		System.out.println(false);
+		
+		// 논리형 자료형을 만들어 낼 수 있는 연산
+		System.out.println(10 > 3);
+		System.out.println(11 * 11 < 10 * 12);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX08 {
+
+	public static void main(String[] args) {
+		// 문자열 자료형
+		System.out.println("String");
+		
+		System.out.println("2024-06-11");
+		System.out.println(2024-06-11);
+		
+		// + 연산에서 자동 타입 변환
+		System.out.println("hello" + "java");
+		System.out.println("hello" + 100);
+		System.out.println(100 + 200);
+		System.out.println(123.456 + 789);
+
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX09 {
+
+	public static void main(String[] args) {
+		// 주석(Comment)
+		// 프로그램 코드 내에서 설명문을 넣기 위해 사용
+		
+		// 한 줄 주석
+		// 사용법: 앞에 /을 두개 입력
+		
+		// 여러줄 주석
+		// 사용법: 시작점과 끝점을 지정해서 시작점/* 끝점*/에 입력
+		
+		// 한 줄 주석
+		
+		/* 여
+		러
+		줄
+		주
+		석*/
+
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class EX10 {
+
+	public static void main(String[] args) {
+		// 꿀팁1
+		System.out.println("String");
+		System.out.println("2024-06-11");
+		System.out.println(2024-06-11);
+		System.out.println("hello" + "java");
+		System.out.println("hello" + 100);
+		System.out.println(100 + 200);
+		System.out.println(123.456 + 789);
+		
+		// 꿀팁2
+		System.out.println();
+		
+		// 꿀팁3
+		System.out.println("콘솔실행");
+		
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter1;
+
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("\t\t 회비 정보");
+		System.out.println("========================================");
+		System.out.println("이름\t나이\t전화번호\t회비");
+		System.out.println("========================================");
+		System.out.println("이지은\t\"31\"\t1111-1111\t\\20,000");
+		System.out.println("유인나\t\"25\"\t2222-2222\t\\30,000");
+		System.out.println("박지연\t\"31\"\t3333-3333\t\\40,000");
+		System.out.println("========================================");
+		System.out.println("총합계\t\t\t\t\\90,000");
+		System.out.println("========================================");
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+package Chapter2;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+		// 변수 생성 방법1
+		int a1;
+		a1 = 10;
+		System.out.println(a1);
+		
+		// 변수 생성 방법2
+		int a2 = 20;
+		System.out.println(a2);
+		
+		// 변수 생성 방법3
+		int a3 = a2;
+		System.out.println(a3);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------

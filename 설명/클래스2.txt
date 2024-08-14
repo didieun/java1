@@ -1,0 +1,226 @@
+package Chapter10;
+class Student1 {
+	String name = "펭수";
+	int age = 20;
+	String major = "펭귄학과";
+}
+public class Quiz1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student1 펭수 = new Student1();
+		System.out.println("성함: " + 펭수.name);
+		System.out.println("나이: " + 펭수.age);
+		System.out.println("학과: " + 펭수.major);
+	}
+}
+------------------------------------------------------------------------------------------
+package Chapter10;
+class Student2 {
+	String name = "펭수";
+	int age = 20;
+	String major = "펭귄학과";
+	
+	public void printStudentInfo() {
+		System.out.println("성함: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("학과: " + major);
+	}
+}
+public class Quiz2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student2 펭수 = new Student2();
+		펭수.printStudentInfo();
+	}
+}
+
+------------------------------------------------------------------------------------------
+package Chapter10;
+class Student3 {
+	String name = "펭수";
+	int age = 20;
+	String major = "펭귄학과";
+	
+	public void printStudentInfo() {
+		System.out.println("성함: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("학과: " + major);
+	}
+	
+	void startStudying() {
+		System.out.println(major + " 학과 " + name + " 님이 공부를 시작합니다.");
+	}
+}
+public class Quiz3 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student3 펭수 = new Student3();
+		펭수.startStudying();
+	}
+}
+------------------------------------------------------------------------------------------
+package Chapter10;
+import java.util.Scanner;
+class EvenOdd {
+	String checkEvenOdd(int num) {
+		if (num % 2 == 0) {
+			return num + "은 짝수";
+		} else {
+			return num + "은 홀수";
+		}
+	}
+}
+public class Quiz4 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		EvenOdd eo = new EvenOdd();
+		
+		System.out.print("수 입력: ");
+		int number = input.nextInt();
+		
+		String result = eo.checkEvenOdd(number);
+		
+		System.out.println("결과: " + result);
+		input.close();
+	}
+}
+
+------------------------------------------------------------------------------------------
+package Chapter10;
+class Car {
+	private String brand;
+    private String model;
+    private int year;
+    
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+    
+    // toString 메소드
+    @Override
+    public String toString() {
+        return "brand : "+ brand + "\n" + "model : " + model + "\n" +"year : " + year;
+    }
+}
+public class Quiz5 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car benz = new Car("Benz", "E350d", 2024);
+        System.out.println(benz);
+        Car bmw = new Car("Bmw", "iX", 2024);
+        System.out.println(bmw);
+        Car genesis = new Car("Genesis", "G80", 2024);
+        System.out.println(genesis);
+        
+	}
+}
+
+------------------------------------------------------------------------------------------
+package Chapter10;
+import java.util.Scanner;
+class Prime {
+public int primeCheck(int num) {
+	int cnt = 0;
+	for (int i = 1; i <= num; i++) {
+		if (num % i == 0)
+			cnt++;
+	}
+	return cnt;
+}
+public void outPut(int num, int cnt) {
+	if (cnt == 2) {
+		System.out.println(num + "은(는) 소수 입니다.");
+	} else {
+		System.out.println(num + "은(는) 소수가 아닙니다.");
+		}
+	}
+}
+public class Quiz6 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		Prime prime = new Prime();
+		System.out.print("정수 입력: ");
+		int num = input.nextInt();
+		input.close();
+		int cnt = prime.primeCheck(num);
+		prime.outPut(num, cnt);		
+	}
+}
+
+------------------------------------------------------------------------------------------
+package Chapter10;
+import java.util.Scanner;
+
+class UpDown {
+	// 1.  Random값 저장, 시도 횟수 저장
+	public int rand;
+	public int score;
+	// 2. Random값 발생
+	public void randomMethod() {
+		this.rand = (int)(Math.random()*99+1);
+	}
+	// 3. 이전 기록 확인
+	public int scoreCheck(int score) {
+		this.score = score;
+		return this.score;
+	}
+}
+
+public class Quiz7 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		UpDown ud = new UpDown();
+		int choice, user, scoreCount = 0, scoreResult = 0;
+		while (true) {
+			System.out.println("===== UP & DOWN GAME =====");
+			System.out.println("1. 게임 시작");
+			System.out.println("2. 기록 확인");
+			System.out.println("3. 게임 종료");
+			System.out.print("번호를 선택하세요: ");
+			choice = input.nextInt();
+			switch (choice) {
+				case 1:
+					System.out.println("===== Game Start =====");
+					ud.randomMethod();
+					System.out.println(ud.rand);
+					
+					while (true) {
+						System.out.print("정답 입력: ");
+						user = input.nextInt();
+						if (ud.rand > user) {
+							System.out.println("UP!");
+							scoreCount++;
+						} else if (ud.rand < user) {
+							System.out.println("DOWN!");
+							scoreCount++;
+						} else {
+							System.out.println("GOOD!");
+							scoreCount++;
+							System.out.println("\n정답을 입력하셨습니다.>");
+							System.out.println("< 정답 입력 횟수: " + scoreCount + "회 입니다.>");
+							scoreResult = ud.scoreCheck(scoreCount);
+							break;
+						}
+					}
+					break;
+					
+				case 2:
+					System.out.println("이전 기록은 " + scoreResult + "점 입니다.");
+					break;
+					
+				case 3:
+					System.out.println("게임을 종료 합니다.");
+					input.close();
+					System.exit(0);
+					break;
+			} // switch
+			
+		} // while
+	
+	}
+}
